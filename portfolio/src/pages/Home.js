@@ -1,8 +1,8 @@
+import "./Home.css";
+
 const Home = () => (
     <div className="content">
-        <h2>
-            Home
-        </h2>
+        <h2 className>Home</h2>
     </div>
 );
 

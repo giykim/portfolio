@@ -1,8 +1,8 @@
+import "./NoPage.css";
+
 const NoPage = () => (
     <div className="content">
-        <h2>
-            No Page Found
-        </h2>
+        <h2>No Page Found</h2>
     </div>
 );
 
