@@ -6,15 +6,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 
 const routes = [
     { path: "/", element: <Home />, index: true },
-    { path: "about", element: <About /> },
     { path: "experience", element: <Experience /> },
     { path: "projects", element: <Projects /> },
-    { path: "contact", element: <Contact /> },
+    { path: "about", element: <About /> },
     { path: "*", element: <NoPage /> },
 ];
 
