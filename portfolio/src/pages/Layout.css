@@ -1,1 +1,42 @@
 @import "../styles/base.css";
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    background-color: #363636;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px;
+    border-top: 1px solid #ddd; /* Light gray border on top */
+}
+
+.footer p {
+    color: #666; /* Subtle gray text */
+    font-size: 14px; /* Small text */
+    margin: 0;
+}
