@@ -1,11 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* .content class */
 .content {
-    @apply p-4 bg-gray-100 min-h-screen flex flex-col items-center;
+    padding: 1rem; /* p-4 */
+    background-color: #f7fafc; /* bg-gray-100 */
+    min-height: 100vh; /* min-h-screen */
+    display: flex;
+    flex-direction: column; /* flex-col */
+    align-items: flex-start; /* items-start */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    max-width: 64rem; /* max-w-4xl */
 }
 
+/* h2 element */
 h2 {
-    @apply text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors;
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold; /* font-bold */
+    color: #2d3748; /* text-gray-800 */
+    transition: color 0.3s ease; /* transition-colors */
+}
+
+h2:hover {
+    color: #3182ce; /* hover:text-blue-600 */
 }
