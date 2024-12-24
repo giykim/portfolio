@@ -1,14 +1,19 @@
 /* .content class */
 .content {
-    padding: 1rem; /* p-4 */
-    background-color: #f7fafc; /* bg-gray-100 */
-    min-height: 100vh; /* min-h-screen */
+    padding: 1rem;
+    background-color: #f7fafc;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* flex-col */
-    align-items: flex-start; /* items-start */
-    margin-left: auto; /* mx-auto */
-    margin-right: auto; /* mx-auto */
-    max-width: 64rem; /* max-w-4xl */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem; /* Reduces the space between flex items */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 64rem;
+}
+
+.content p {
+    margin: 0; /* Removes space between paragraphs */
 }
 
 /* h2 element */
