@@ -1,1 +1,17 @@
 @import "../styles/base.css";
+
+.welcome-text {
+    font-size: 5rem;
+    min-height: 50vh;
+    font-weight: bold;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.welcome-text p {
+    margin: 0
+}

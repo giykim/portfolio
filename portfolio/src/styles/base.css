@@ -1,7 +1,10 @@
+body {
+    background: linear-gradient(135deg, #52519e, #8273db); /* Gradient background */
+}
+
 /* .content class */
 .content {
     padding: 1rem;
-    background-color: #f7fafc;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,7 +23,6 @@
 h2 {
     font-size: 1.5rem; /* text-2xl */
     font-weight: bold; /* font-bold */
-    color: #2d3748; /* text-gray-800 */
     transition: color 0.3s ease; /* transition-colors */
 }
 
