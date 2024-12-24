@@ -1,7 +1,8 @@
 import { Link, Outlet } from "react-router-dom"
-import "./Layout.css";
+import { motion } from "framer-motion"
+import "./Navigation.css";
 
-const Layout = () => {
+const Navigation = () => {
     return (
         <>
             <div className="navbar">
@@ -14,7 +15,14 @@ const Layout = () => {
                 </ul>
             </div>
 
-            <Outlet />
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+                <Outlet />
+            </motion.div>
 
             <footer className="footer">
                 <p>© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</p>
@@ -23,4 +31,4 @@ const Layout = () => {
     )
 };
 
-export default Layout;
+export default Navigation;
