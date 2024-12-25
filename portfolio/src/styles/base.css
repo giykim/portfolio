@@ -2,6 +2,11 @@ body {
     background: linear-gradient(135deg, #d7d7ff, #f5f4ff);
 }
 
+body a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .content {
     margin-top: 60px;
     padding: 1rem;

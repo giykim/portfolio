@@ -12,7 +12,7 @@ const About = () => (
         </p>
 
         <p><strong>Education</strong></p>
-        <p><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University</a></p>
+        <p><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
         <ul>
             <li>BS in Computer Science</li>
             <li>BS in Statistical Science</li>
