@@ -12,7 +12,7 @@ const About = () => (
         </p>
 
         <p><strong>Education</strong></p>
-        <p>Duke University</p>
+        <p><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University</a></p>
         <ul>
             <li>BS in Computer Science</li>
             <li>BS in Statistical Science</li>
@@ -30,13 +30,13 @@ const About = () => (
         <p><strong>Contact</strong></p>
         <ul>
             <li>
-                <p><strong>Email:</strong> gk122@duke.edu</p>
+                <p><strong>Email: </strong><a href="mailto:gk122@duke.edu">gk122@duke.edu</a></p>
             </li>
             <li>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">linkedin.com/in/giyoung-kim</a></p>
+                <p><strong>LinkedIn: </strong><a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">linkedin.com/in/giyoung-kim</a></p>
             </li>
             <li>
-                <p><strong>GitHub:</strong> <a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">github.com/giykim</a></p>
+                <p><strong>GitHub: </strong><a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">github.com/giykim</a></p>
             </li>
         </ul>
     </div>

@@ -18,7 +18,7 @@ const Navigation = () => {
     return (
         <>
             <nav className="navbar">
-                <h1>Giyoung Kim</h1>
+                <h1><Link to="/">Giyoung Kim</Link></h1>
                 <div onClick={toggleIsOpen}>
                     <Hamburger />
                 </div>
