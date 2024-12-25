@@ -1,29 +1,44 @@
 @import "../styles/base.css";
 
-.navbar ul {
-    display: flex;
-    justify-content: center;
+.navlinks {
+    position: fixed;
+    left: -150%;
+    width: 100%;
+    height: 100%;
     background-color: #363636;
-    padding: 10px;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
     list-style: none;
-    margin: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar li {
-    margin: 0 15px;
+.navlinks.open {
+    left: 0;
 }
 
-.navbar a {
+.navlinks a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 34px;
     font-weight: 500;
+    padding: 10px;
     transition: color 0.3s;
 }
 
-.navbar a:hover {
+.navlinks a:hover {
     color: #007bff;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+    justify-content: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
 }
 
 .footer {
@@ -32,11 +47,9 @@
     align-items: center;
     background-color: #363636;
     padding: 10px;
-    border-top: 1px solid #ddd; /* Light gray border on top */
 }
 
 .footer p {
     color: #ffffff;
-    font-size: 14px; /* Small text */
-    margin: 0;
+    font-size: 14px;
 }

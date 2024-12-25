@@ -3,12 +3,14 @@ import "./About.css";
 const About = () => (
     <div className="content">
         <h2>About</h2>
+
         <p><strong>Summary</strong></p>
         <p>
             Quantitative undergraduate with expertise in software engineering, machine learning, and statistical modeling.
             Experienced in agile development and advanced research on interpretable models.
             Seeking a Developer or Research position to leverage my skills to support innovative projects and initiatives.
         </p>
+
         <p><strong>Education</strong></p>
         <p>Duke University</p>
         <ul>
@@ -16,6 +18,15 @@ const About = () => (
             <li>BS in Statistical Science</li>
             <li>Mathematics Minor</li>
         </ul>
+
+        <p><strong>Technical Skills</strong></p>
+        <ul>
+            <li><strong>Languages: </strong>Python, C#, C/C++, Java, SQL (Postgres), R, JavaScript, HTML/CSS</li>
+            <li><strong>Frameworks: </strong> .NET, Flask, React, Node.js, Material-UI</li>
+            <li><strong>Developer Tools: </strong>Git, Azure, Docker, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse</li>
+            <li><strong>Libraries: </strong>NumPy, pandas, Scikit-learn, PyTorch, TensorFlow, Selenium, BeautifulSoup, Matplotlib, Plotly Das</li>
+        </ul>
+
         <p><strong>Contact</strong></p>
         <ul>
             <li>
