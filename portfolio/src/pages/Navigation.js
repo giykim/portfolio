@@ -11,10 +11,6 @@ const Navigation = () => {
         setIsOpen(!isOpen);
     };
 
-    const resetScroll = () => {
-        window.scrollTo(0, 0);
-    };
-
     return (
         <>
             <nav className="navbar">
@@ -33,11 +29,10 @@ const Navigation = () => {
             </ul>
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, transform: "translateY(20px)" }}
+                animate={{ opacity: 1, transform: "translateY(0px)" }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                onAnimationComplete={resetScroll}
             >
                 <Outlet />
             </motion.div>
