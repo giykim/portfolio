@@ -1,6 +1,6 @@
 @import "../styles/base.css";
 
-.welcome-text {
+.home-text {
     font-size: 5rem;
     min-height: 50vh;
     font-weight: bold;
@@ -10,8 +10,9 @@
     align-content: center;
     text-align: center;
     flex-direction: column;
+    align-self: center;
 }
 
-.welcome-text p {
+.home-text p {
     margin: 0
 }

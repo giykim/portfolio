@@ -5,13 +5,14 @@
     position: fixed;
     display: flex;
     align-items: center;
-    background-color: #363636;
+    background-color: #202020;
+    opacity: 0.9;
     width: 100%;
     z-index: 2;
 }
 
 .navbar h1 {
-    color: black;
+    color: white;
     font-weight: 500;
     margin-inline-start: 10px;
     margin-inline-end: 10px;
@@ -30,6 +31,7 @@
     justify-content: center;
     transition: 0.5s ease;
     list-style: none;
+    margin: 0;
     padding: 0;
     z-index: 1;
 }
@@ -53,11 +55,14 @@
 }
 
 .footer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #363636;
+    background-color: #202020;
+    opacity: 0.9;
     padding: 10px;
+    z-index: 2;
 }
 
 .footer p {
