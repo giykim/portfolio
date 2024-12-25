@@ -24,10 +24,12 @@ const Navigation = () => {
                 </div>
             </nav>
             <ul className={`navlinks ${isOpen ? "open" : ""}`}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/experience">Experience</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/about">About</Link></li>
+                <div onClick={toggleIsOpen}>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/experience">Experience</Link></li>
+                    <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                </div>
             </ul>
 
             <motion.div
