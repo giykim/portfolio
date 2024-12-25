@@ -15,9 +15,7 @@ const Navigation = () => {
         <>
             <nav className="navbar">
                 <h1><Link to="/">Giyoung Kim</Link></h1>
-                <div onClick={toggleIsOpen}>
-                    <Hamburger />
-                </div>
+                <Hamburger toggled={isOpen} toggle={toggleIsOpen} />
             </nav>
             <ul className={`navlinks ${isOpen ? "open" : ""}`}>
                 <div onClick={toggleIsOpen}>
