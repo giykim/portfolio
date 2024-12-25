@@ -1,13 +1,31 @@
 @import "../styles/base.css";
 
+.navbar {
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #363636;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar h1 {
+    color: black;
+    font-weight: 500;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+}
+
 .navlinks {
     position: fixed;
-    left: -150%;
+    display: flex;
+    background-color: #363636;
+    top: 0;
+    left: -110%;
     width: 100%;
     height: 100%;
-    background-color: #363636;
-    opacity: 0.8;
-    display: flex;
+    opacity: 0.9;
     align-items: center;
     justify-content: center;
     transition: 0.5s;
@@ -15,12 +33,15 @@
 }
 
 .navlinks.open {
+    top: 0;
     left: 0;
+    overflow: scroll;
 }
 
 .navlinks a {
     text-decoration: none;
     color: #ffffff;
+    opacity: 1;
     font-size: 34px;
     font-weight: 500;
     padding: 10px;
@@ -29,16 +50,6 @@
 
 .navlinks a:hover {
     color: #007bff;
-}
-
-.hamburger {
-    position: fixed;
-    z-index: 1;
-    cursor: pointer;
-    justify-content: center;
-    justify-self: center;
-    display: flex;
-    align-items: center;
 }
 
 .footer {

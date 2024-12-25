@@ -1,9 +1,9 @@
 body {
-    background: linear-gradient(135deg, #d7d7ff, #f5f4ff); /* Gradient background */
+    background: linear-gradient(135deg, #d7d7ff, #f5f4ff);
 }
 
-/* .content class */
 .content {
+    margin-top: 60px;
     padding: 1rem;
     min-height: 100vh;
     display: flex;
@@ -17,15 +17,4 @@ body {
 
 .content p {
     margin: 0; /* Removes space between paragraphs */
-}
-
-/* h2 element */
-h2 {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: bold; /* font-bold */
-    transition: color 0.3s ease; /* transition-colors */
-}
-
-h2:hover {
-    color: #3182ce; /* hover:text-blue-600 */
 }
