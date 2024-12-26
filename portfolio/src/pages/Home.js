@@ -19,7 +19,7 @@ const Home = () => {
         <h1><Link to="/about">About</Link></h1>,
         <h1><Link to="/experience">Experience</Link></h1>,
         <h1><Link to="/projects">Projects</Link></h1>,
-    ]
+    ];
 
     return (
         <div>
