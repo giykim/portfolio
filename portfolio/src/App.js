@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import NoPage from "./pages/NoPage";
+import ScrollToTop from "./components/ScrollToTop"
 
 const routes = [
     { path: "/", element: <Home />, index: true },
@@ -21,6 +22,8 @@ function Layout() {
 
     return (
         <AnimatePresence mode="wait">
+            <ScrollToTop />
+
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Navigation />}>
                     {routes.map(({ path, element, index }, key) => (
