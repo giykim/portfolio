@@ -72,7 +72,7 @@ const Home = () => {
                     <h1><Link to="/projects">Projects</Link></h1>
                 </div>
                 <div className="home-narrator">
-                    <img alt="Image" />
+                    <img alt="profile" />
                 </div>
             </div>
         </div>

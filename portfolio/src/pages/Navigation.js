@@ -1,8 +1,18 @@
-import { useState } from "react"
-import { Link, Outlet } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { Link, Outlet, useLocation } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Divide as Hamburger } from "hamburger-react";
 import "./Navigation.css";
+
+const ScrollToTop = () => {
+    const location = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0); // Reset scroll position to top
+    }, [location]);
+  
+    return null;
+};
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +23,8 @@ const Navigation = () => {
 
     return (
         <>
+            <ScrollToTop />
+
             <nav className="navbar">
                 <h1><Link to="/">Giyoung Kim</Link></h1>
                 <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
