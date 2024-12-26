@@ -30,7 +30,7 @@ const Navigation = () => {
                 initial={{ opacity: 0, transform: "translateY(20px)" }}
                 animate={{ opacity: 1, transform: "translateY(0px)" }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
             >
                 <Outlet />
             </motion.div>

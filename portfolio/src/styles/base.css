@@ -12,15 +12,12 @@ body a {
 
 .content {
     margin-top: 60px;
-    padding: 1rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    align-self: flex-start;
+    align-items: start;
+    justify-self: center;
     gap: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 64rem;
 }
 
