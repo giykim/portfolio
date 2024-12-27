@@ -11,7 +11,7 @@ const Projects = () => {
             </div>
             <ul>
                 <li>Built a full-stack web application with Flask replicating Amazon, including user authentication, product catalog, and shopping cart</li>
-                <li>Integrated PostgreSQL for managing user accounts, product inventory, and order transactions</li>
+                <li>Integrated PostgreSQL <strong>database</strong> for managing user accounts, product inventory, and order transactions</li>
                 <li>Developed responsive UI/UX with HTML, CSS, and JavaScript for seamless user interaction</li>
             </ul>
             <div class="imgcontainer">
@@ -26,7 +26,8 @@ const Projects = () => {
             </div>
             <ul>
                 <li>Developed a Dash app to demonstrate a trading strategy focused on Palantir stock</li>
-                <li>Used Selenium for web scraping to gather features for forecasting short-term market movements</li>
+                <li>Used Selenium for web scraping to gather features for <strong>forecasting</strong> short-term market movements</li>
+                <li>Trained <strong>machine learning</strong> models to predict future stock movements</li>
                 <li>Designed a buy/sell algorithm with performance analysis to filter underperforming trades based on historical data</li>
             </ul>
             <div class="imgcontainer">

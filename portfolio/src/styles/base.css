@@ -78,7 +78,7 @@ ul {
     padding-left: 0;
     text-align: left;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .logocontainer {
@@ -103,6 +103,6 @@ ul {
 .imgcontainer img {
     width: auto;
     height: 100%;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+    border: 10px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }

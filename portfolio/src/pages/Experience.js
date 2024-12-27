@@ -41,9 +41,9 @@ const Experience = () => {
             </div>
             
             <ul>
-                <li>Enhanced automated policy and quote generation through agile development, improving system efficiency and reducing errors</li>
-                <li>Automated policy processing using C# .NET framework for major clients like State Farm and Liberty Mutual, reducing defects by 14%</li>
-                <li>Led QA testing to ensure 99% code stability, collaborating with agile teams and creating mock data to test various scenarios and edge cases</li>
+                <li>Enhanced automated policy and quote generation through <strong>agile development</strong>, improving system efficiency and reducing errors</li>
+                <li>Automated policy processing using C# <strong>.NET</strong> framework for major clients like State Farm and Liberty Mutual, reducing defects by 14%</li>
+                <li>Led <strong>QA testing</strong> to ensure 99% code stability, collaborating with agile teams and creating mock data to test various scenarios and edge cases</li>
                 <li>Created batch processing scripts that reduced manual labor by hours daily, improving operational efficiency and minimizing manual intervention</li>
             </ul>
         </>,
@@ -62,9 +62,9 @@ const Experience = () => {
             </div>
             <ul>
                 <li>Optimized game data collection and search functionality for Dark Age of Camelot, reducing search times by 30%</li>
-                <li>Engineered a C++ and MySQL-based data exporter to integrate game data seamlessly into the website’s database</li>
+                <li>Engineered a C++ and <strong>MySQL</strong>-based data exporter to integrate game data seamlessly into the website's database</li>
                 <li>Revamped search and filtering for items, quests, and entities, enhancing player access to in-game content</li>
-                <li>Improved backend efficiency by refining data aggregation and retrieval, enabling faster, more reliable data handling</li>
+                <li>Improved backend efficiency by refining <strong>data aggregation</strong> and retrieval, enabling faster, more reliable data handling</li>
             </ul>
         </>
     ];
