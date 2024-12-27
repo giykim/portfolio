@@ -17,7 +17,7 @@ body a {
     align-items: center;
     justify-self: center;
     gap: 0.5rem;
-    max-width: 64rem;
+    max-width: 50rem;
 }
 
 .section {
@@ -39,20 +39,15 @@ body a {
     font-weight: bold;
 }
 
-.section p {
-    align-self: center;
-    max-width: 80%;
-}
-
 .listheader {
     display: flex;
     flex-direction: column;
 }
 
 .listheader p {
+    align-self: left;
     text-align: left;
     white-space: nowrap;
-    max-width: 80%;
     margin: 0;
 }
 

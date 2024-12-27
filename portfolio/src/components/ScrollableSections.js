@@ -11,7 +11,7 @@ const ScrollableSections = ({ sections }) => {
         scroller.scrollTo(`section${section}`, {
             smooth: true,
             duration: 500,
-            offset: -60,
+            offset: 0,
         });
     };
 

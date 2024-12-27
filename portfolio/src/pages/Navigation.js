@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { Link, Outlet } from "react-router-dom"
 import { Divide as Hamburger } from "hamburger-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import "./Navigation.css";
-import EaseDiv from "../components/EaseDiv";
+import Ease from "../components/Ease";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +16,18 @@ const Navigation = () => {
     return (
         <>
             <nav className="navbar">
-                <h1><Link to="/">Giyoung Kim</Link></h1>
-                <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
+                <div className="subnavbar">
+                    <h1><Link to="/">Giyoung Kim</Link></h1>
+                    <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
+                </div>
+                <div className="subnavbar">
+                    <a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                    <a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faLinkedin} />
+                    </a>
+                </div>
             </nav>
             <ul className={`navlinks ${isOpen ? "open" : ""}`}>
                 <div onClick={toggleIsOpen}>
@@ -26,9 +38,9 @@ const Navigation = () => {
                 </div>
             </ul>
 
-            <EaseDiv>
+            <Ease>
                 <Outlet />
-            </EaseDiv>
+            </Ease>
 
             <footer className="footer">
                 <p>© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</p>

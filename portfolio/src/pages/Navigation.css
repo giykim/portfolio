@@ -9,13 +9,23 @@
     opacity: 0.9;
     width: 100%;
     z-index: 2;
+    justify-content: space-between;
 }
 
-.navbar h1 {
+.subnavbar {
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 20px;
+}
+
+.subnavbar h1 {
     font-weight: 500;
-    margin-inline-start: 20px;
-    margin-inline-end: 10px;
+}
+
+.subnavbar svg {
+    font-size: 30px;
 }
 
 .navlinks {

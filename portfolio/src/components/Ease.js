@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const EaseDiv = ({ children }) => {
+const Ease = ({ children }) => {
     return (
         <motion.div
             style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
@@ -14,4 +14,4 @@ const EaseDiv = ({ children }) => {
     );
 }
 
-export default EaseDiv;
+export default Ease;

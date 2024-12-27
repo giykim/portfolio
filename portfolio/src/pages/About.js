@@ -1,18 +1,18 @@
 import ScrollableSections from "../components/ScrollableSections";
 import "./About.css";
-import EaseDiv from "../components/EaseDiv";
+import Ease from "../components/Ease";
 
 const About = () => {
     const sections = [
         <>
             <h1>Summary</h1>
-            <EaseDiv>
+            <Ease>
                 <p>
                     I'm a quantitative undergraduate with a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
                     With hands-on experience in <strong>agile development</strong> and advanced research on <strong>interpretable models</strong>, I am eager to apply my skills in a Developer or Research position.
                     My goal is to contribute to innovative projects and initiatives while continuing to grow professionally in a dynamic environment.
                 </p>
-            </EaseDiv>
+            </Ease>
         </>,
         <>
             <h1>Education</h1>

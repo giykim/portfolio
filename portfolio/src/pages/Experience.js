@@ -1,12 +1,12 @@
 import ScrollableSections from "../components/ScrollableSections";
 import "./Experience.css";
-import EaseDiv from "../components/EaseDiv";
+import Ease from "../components/Ease";
 
 const Experience = () => {
     const sections = [
         <>
             <h1>Machine Learning Research Assistant</h1>
-            <EaseDiv>
+            <Ease>
                 <div className="listheader">
                     <p className="organization"><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
                     <p className="date">May 2023 - Present</p>
@@ -17,7 +17,7 @@ const Experience = () => {
                     <li>Created an active learning system for mammogram lesion segmentation, reducing expert annotation by 44%</li>
                     <li>Building a flexible framework for integrating prototypical-part models, adaptable to various professional domains</li>
                 </ul>
-            </EaseDiv>
+            </Ease>
         </>,
         <>
             <h1>Software Engineering Intern</h1>

@@ -1,32 +1,32 @@
 import { Link } from "react-router-dom"
 import ScrollableSections from '../components/ScrollableSections';
 import "./Home.css";
-import EaseDiv from "../components/EaseDiv";
+import Ease from "../components/Ease";
 
 const Home = () => {
     const sections = [
         <>
             <h1>Welcome to My Portfolio!</h1>
-            <EaseDiv>
+            <Ease>
                 <p>Hi, I'm <strong>Giyoung</strong>!</p>
-            </EaseDiv>
+            </Ease>
         </>,
         <>
             <h1><Link to="/about">About</Link></h1>
             <p>
-                Click here to learn more about my <strong>education</strong>, <strong>technical skills</strong>, and <strong>contact</strong>!
+                Click to learn more about my <strong>education</strong>, <strong>technical skills</strong>, and <strong>contact</strong>!
             </p>
         </>,
         <>
             <h1><Link to="/experience">Experience</Link></h1>
             <p>
-                Click here to learn more about my professional <strong>experience</strong>!
+                Click to learn more about my professional <strong>experience</strong>!
             </p>
         </>,
         <>
             <h1><Link to="/projects">Projects</Link></h1>
             <p>
-                Click here to learn more about my personal <strong>projects</strong>!
+                Click to learn more about my personal <strong>projects</strong>!
             </p>
         </>,
     ];
