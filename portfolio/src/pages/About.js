@@ -1,27 +1,39 @@
 import ScrollableSections from "../components/ScrollableSections";
+import { motion } from "framer-motion";
 import "./About.css";
 
 const About = () => {
     const sections = [
         <>
-            <p><strong>Summary</strong></p>
-            <p>
-                Quantitative undergraduate with expertise in software engineering, machine learning, and statistical modeling.
-                Experienced in agile development and advanced research on interpretable models.
-                Seeking a Developer or Research position to leverage my skills to support innovative projects and initiatives.
-            </p>
+            <h1>Summary</h1>
+            <motion.div
+                initial={{ opacity: 0, transform: "translateY(20px)" }}
+                animate={{ opacity: 1, transform: "translateY(0px)" }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                <p>
+                    I'm a quantitative undergraduate with a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
+                    With hands-on experience in <strong>agile development</strong> and advanced research on <strong>interpretable models</strong>, I am eager to apply my skills in a Developer or Research position.
+                    My goal is to contribute to innovative projects and initiatives while continuing to grow professionally in a dynamic environment.
+                </p>
+            </motion.div>
         </>,
         <>
-            <p><strong>Education</strong></p>
-            <p><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
+            <h1>Education</h1>
+            <div className="listheader">
+                <p><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer"><strong>Duke University &#8599;</strong></a></p>
+                <p className="date"><em>Aug. 2021 - May 2025</em></p>
+            </div>
             <ul>
-                <li>BS in Computer Science</li>
-                <li>BS in Statistical Science</li>
-                <li>Mathematics Minor</li>
+                <li>BS in <strong>Computer Science</strong></li>
+                <li>BS in <strong>Statistical Science</strong></li>
+                <li><strong>Mathematics</strong> Minor</li>
             </ul>
+            
         </>,
         <>
-            <p><strong>Technical Skills</strong></p>
+            <h1><strong>Technical Skills</strong></h1>
             <ul>
                 <li><strong>Languages: </strong>Python, C#, C/C++, Java, SQL (Postgres), R, JavaScript, HTML/CSS</li>
                 <li><strong>Frameworks: </strong> .NET, Flask, React, Node.js, Material-UI</li>
@@ -30,16 +42,16 @@ const About = () => {
             </ul>
         </>,
         <>
-            <p><strong>Contact</strong></p>
+            <h1><strong>Contact</strong></h1>
             <ul>
                 <li>
-                    <p><strong>Email: </strong><a href="mailto:gk122@duke.edu">gk122@duke.edu &#8599;</a></p>
+                    <strong>Email: </strong><a href="mailto:gk122@duke.edu">gk122@duke.edu &#8599;</a>
                 </li>
                 <li>
-                    <p><strong>LinkedIn: </strong><a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">linkedin.com/in/giyoung-kim &#8599;</a></p>
+                    <strong>LinkedIn: </strong><a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">linkedin.com/in/giyoung-kim &#8599;</a>
                 </li>
                 <li>
-                    <p><strong>GitHub: </strong><a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">github.com/giykim &#8599;</a></p>
+                    <strong>GitHub: </strong><a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">github.com/giykim &#8599;</a>
                 </li>
             </ul>
         </>,
