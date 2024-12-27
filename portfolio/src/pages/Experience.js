@@ -8,7 +8,12 @@ const Experience = () => {
             <h1>Machine Learning Research Assistant</h1>
             <Ease>
                 <div className="listheader">
-                    <p className="organization"><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
+                    <div class="organization">
+                        <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/duke.png" alt="Duke Logo" class="logo" />
+                            <p className="name">Duke University &#8599;</p>
+                        </a>
+                    </div>
                     <p className="date">May 2023 - Present</p>
                 </div>
                 <ul>
@@ -22,7 +27,12 @@ const Experience = () => {
         <>
             <h1>Software Engineering Intern</h1>
             <div className="listheader">
-                <p className="organization"><a href="https://www.hagerty.com/" target="_blank" rel="noopener noreferrer">Hagerty &#8599;</a></p>
+                <div class="organization">
+                    <a href="https://www.hagerty.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/hagerty.png" alt="Hagerty Logo" class="logo" />
+                        <p className="name">Hagerty &#8599;</p>
+                    </a>
+                </div>
                 <p className="date">May 2024 - August 2024</p>
             </div>
             
@@ -36,7 +46,14 @@ const Experience = () => {
         <>
             <h1>Software Engineering Intern</h1>
             <div className="listheader">
-                <p className="organization"><a href="https://broadsword.com/" target="_blank" rel="noopener noreferrer">Broadsword Online Games &#8599;</a></p>
+                <div class="organization">
+                    <a href="https://broadsword.com/" target="_blank" rel="noopener noreferrer">
+                        <div class="imgcontainer">
+                            <img src="images/broadsword.png" alt="Broadsword Logo" class="logo" />
+                        </div>
+                        <p className="name">Broadsword Online Games &#8599;</p>
+                    </a>
+                </div>
                 <p className="date">May 2022 - July 2022</p>
             </div>
             <ul>

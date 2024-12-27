@@ -13,7 +13,7 @@ const About = () => {
                     My goal is to contribute to innovative projects and initiatives while continuing to grow professionally in a dynamic environment.
                 </p>
                 <p>
-                    Outside of my technical pursuits, I have a passion for weightlifting, music, and gaming.
+                    Outside of my technical pursuits, I have a passion for weightlifting, gaming, and listening to music.
                     Growing up, I swam and played the piano, and I continually strive to revisit these activities alongside exploring new hobbies.
                     Recently, I've been exploring fashion, running, and learning to play the guitar.
                     These interests help me maintain a balanced and creative lifestyle.
@@ -23,7 +23,12 @@ const About = () => {
         <>
             <h1>Education</h1>
             <div className="listheader">
-                <p className="organization"><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
+                <div class="organization">
+                    <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/duke.png" alt="Duke Logo" class="logo" />
+                        <p className="name">Duke University &#8599;</p>
+                    </a>
+                </div>
                 <p className="date">August 2021 - May 2025</p>
             </div>
             <ul>

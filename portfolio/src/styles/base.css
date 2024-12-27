@@ -53,6 +53,17 @@ body a {
 }
 
 .listheader .organization {
+    margin-bottom: 10px;
+}
+
+.listheader .organization a {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.listheader .name {
     font-weight: bold;
 }
 
@@ -64,4 +75,18 @@ ul {
     list-style-position: outside;
     padding-left: 0;
     text-align: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.imgcontainer {
+    display: flex;
+    height: 50px;
+    justify-items: center;
+    align-items: center;
+}
+
+img {
+    width: 50px;
+    height: auto;
 }
