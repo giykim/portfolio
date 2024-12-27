@@ -17,10 +17,11 @@ const Navigation = () => {
         <>
             <nav className="navbar">
                 <div className="subnavbar">
-                    <h1><Link to="/">Giyoung Kim</Link></h1>
+                    <h1><Link to="/">Giyoung's Portfolio</Link></h1>
                     <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
                 </div>
                 <div className="subnavbar">
+                    <Link to="https://github.com/giykim/portfolio" target="_blank" rel="noopener noreferrer">Source Code</Link>
                     <a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>

@@ -6,7 +6,7 @@ const Projects = () => {
         <>
             <h1>Mini Amazon</h1>
             <div className="listheader">
-                <p><a href="https://github.com/giykim/mini-amazon" target="_blank" rel="noopener noreferrer">Repo &#8599;</a></p>
+                <p><a href="https://github.com/giykim/mini-amazon" target="_blank" rel="noopener noreferrer">View the repository &#8599;</a></p>
                 <p className="date">September 2024 - November 2024</p>
             </div>
             <ul>
@@ -18,7 +18,7 @@ const Projects = () => {
         <>
             <h1>Palantir Stock Trading Strategy</h1>
             <div className="listheader">
-                <p><a href="https://github.com/giykim/algo-project" target="_blank" rel="noopener noreferrer">Repo &#8599;</a></p>
+                <p><a href="https://github.com/giykim/algo-project" target="_blank" rel="noopener noreferrer">View the repository &#8599;</a></p>
                 <p className="date">March 2024 - April 2024</p>
             </div>
             <ul>
