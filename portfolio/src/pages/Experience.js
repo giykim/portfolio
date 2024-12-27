@@ -1,21 +1,36 @@
 import ScrollableSections from "../components/ScrollableSections";
+import { motion } from "framer-motion";
 import "./Experience.css";
 
 const Experience = () => {
     const sections = [
         <>
-            <h2><strong>Machine Learning Research Assistant</strong></h2>
-            <h3><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></h3>
-            <ul>
-                <li>Researched prototype-based classification using computer vision to boost model performance and interpretability</li>
-                <li>Developed an interpretable machine learning model with PyTorch, achieving 86% accuracy on a 200-class dataset (11,788 samples)</li>
-                <li>Created an active learning system for mammogram lesion segmentation, reducing expert annotation by 44%</li>
-                <li>Building a flexible framework for integrating prototypical-part models, adaptable to various professional domains</li>
-            </ul>
+            <h1>Machine Learning Research Assistant</h1>
+            <motion.div
+                initial={{ opacity: 0, transform: "translateY(20px)" }}
+                animate={{ opacity: 1, transform: "translateY(0px)" }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+                <div className="listheader">
+                    <p className="organization"><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
+                    <p className="date">May 2023 - Present</p>
+                </div>
+                <ul>
+                    <li>Researched prototype-based classification using <strong>computer vision</strong> to boost model performance and interpretability</li>
+                    <li>Developed an interpretable machine learning model with <strong>PyTorch</strong>, achieving 86% accuracy on a 200-class dataset (11,788 samples)</li>
+                    <li>Created an active learning system for mammogram lesion segmentation, reducing expert annotation by 44%</li>
+                    <li>Building a flexible framework for integrating prototypical-part models, adaptable to various professional domains</li>
+                </ul>
+            </motion.div>
         </>,
         <>
-            <h2><strong>Software Engineering Intern</strong></h2>
-            <h3><a href="https://www.hagerty.com/" target="_blank" rel="noopener noreferrer">Hagerty &#8599;</a></h3>
+            <h1>Software Engineering Intern</h1>
+            <div className="listheader">
+                <p className="organization"><a href="https://www.hagerty.com/" target="_blank" rel="noopener noreferrer">Hagerty &#8599;</a></p>
+                <p className="date">May 2024 - August 2024</p>
+            </div>
+            
             <ul>
                 <li>Enhanced automated policy and quote generation through agile development, improving system efficiency and reducing errors</li>
                 <li>Automated policy processing using C# .NET framework for major clients like State Farm and Liberty Mutual, reducing defects by 14%</li>
@@ -24,8 +39,11 @@ const Experience = () => {
             </ul>
         </>,
         <>
-            <h2><strong>Software Engineering Intern</strong></h2>
-            <h3><a href="https://broadsword.com/" target="_blank" rel="noopener noreferrer">Broadsword Online Games &#8599;</a></h3>
+            <h1>Software Engineering Intern</h1>
+            <div className="listheader">
+                <p className="organization"><a href="https://broadsword.com/" target="_blank" rel="noopener noreferrer">Broadsword Online Games &#8599;</a></p>
+                <p className="date">May 2022 - July 2022</p>
+            </div>
             <ul>
                 <li>Optimized game data collection and search functionality for Dark Age of Camelot, reducing search times by 30%</li>
                 <li>Engineered a C++ and MySQL-based data exporter to integrate game data seamlessly into the website’s database</li>

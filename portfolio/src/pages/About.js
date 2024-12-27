@@ -7,6 +7,7 @@ const About = () => {
         <>
             <h1>Summary</h1>
             <motion.div
+                style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
                 initial={{ opacity: 0, transform: "translateY(20px)" }}
                 animate={{ opacity: 1, transform: "translateY(0px)" }}
                 exit={{ opacity: 0 }}
@@ -22,8 +23,8 @@ const About = () => {
         <>
             <h1>Education</h1>
             <div className="listheader">
-                <p><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer"><strong>Duke University &#8599;</strong></a></p>
-                <p className="date"><em>Aug. 2021 - May 2025</em></p>
+                <p className="organization"><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
+                <p className="date">August 2021 - May 2025</p>
             </div>
             <ul>
                 <li>BS in <strong>Computer Science</strong></li>
