@@ -5,12 +5,18 @@ import Ease from "../components/Ease";
 const About = () => {
     const sections = [
         <>
-            <h1>Summary</h1>
+            <h1>Me</h1>
             <Ease>
                 <p>
                     I'm a quantitative undergraduate with a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
                     With hands-on experience in <strong>agile development</strong> and advanced research on <strong>interpretable models</strong>, I am eager to apply my skills in a Developer or Research position.
                     My goal is to contribute to innovative projects and initiatives while continuing to grow professionally in a dynamic environment.
+                </p>
+                <p>
+                    Outside of my technical pursuits, I have a passion for weightlifting, music, and gaming.
+                    Growing up, I swam and played the piano, and I continually strive to revisit these activities alongside exploring new hobbies.
+                    Recently, I've been exploring fashion, running, and learning to play the guitar.
+                    These interests help me maintain a balanced and creative lifestyle.
                 </p>
             </Ease>
         </>,
