@@ -31,6 +31,7 @@ body a {
     align-self: center;
     text-align: center;
     flex-direction: column;
+    text-shadow: 5px 5px 10px rgba(75, 75, 75, 0.493);
 }
 
 .section h1 {
