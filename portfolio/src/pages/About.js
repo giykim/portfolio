@@ -5,7 +5,9 @@ import Ease from "../components/Ease";
 const About = () => {
     const sections = [
         <>
-            <h1>Me</h1>
+            <div class="imgcontainer">
+                    <img src="images/profile.png" alt="Profile" />
+                </div>
             <Ease>
                 <p>
                     I'm a quantitative undergraduate with a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
