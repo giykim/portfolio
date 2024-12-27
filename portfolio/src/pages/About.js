@@ -28,8 +28,32 @@ const About = () => {
             </div>
             <ul>
                 <li>BS in <strong>Computer Science</strong></li>
+                <li>
+                    Data Structures and Algorithms,
+                    Design and Analysis of Algorithms,
+                    Computer Architecture,
+                    Intro to Data Science,
+                    Intro to Database Systems,
+                    Intro to AI,
+                    Theory and Algorithms for Machine Learning, 
+                    Design and Testing of Algorithmic Trading Systems
+                </li>
                 <li>BS in <strong>Statistical Science</strong></li>
+                <li>
+                    Regression Analysis,
+                    Math of Regression,
+                    Probability,
+                    Machine Learning and Data Mining,
+                    Statistical Learning and Inference,
+                    Intro to Bayesian Statistics
+                </li>
                 <li><strong>Mathematics</strong> Minor</li>
+                <li>
+                    Linear Algebra and Applications,
+                    Multivariable Calculus,
+                    Ordinary and Differential Equations,
+                    Applied Stochastic Processes
+                </li>
             </ul>
             
         </>,
