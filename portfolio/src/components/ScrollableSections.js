@@ -44,9 +44,9 @@ const ScrollableSections = ({ sections }) => {
     }, [currentSection]);
 
     return (
-        <div className="scrollable-sections">
+        <div class="scrollable-sections">
             {sections.map((section, index) => (
-                <div className="section" id={`section${index}`} key={index}>
+                <div class="section" id={`section${index}`} key={index}>
                     {section}
                 </div>
             ))}

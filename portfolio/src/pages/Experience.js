@@ -7,14 +7,16 @@ const Experience = () => {
         <>
             <h1>Machine Learning Research Assistant</h1>
             <Ease>
-                <div className="listheader">
+                <div class="listheader">
                     <div class="organization">
                         <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
-                            <img src="images/duke.png" alt="Duke Logo" class="logo" />
-                            <p className="name">Duke University &#8599;</p>
+                            <div class="logocontainer">
+                                <img src="images/duke.png" alt="Duke Logo" class="logo" />
+                            </div>
+                            <p class="name">Duke University &#8599;</p>
                         </a>
                     </div>
-                    <p className="date">May 2023 - Present</p>
+                    <p class="date">May 2023 - Present</p>
                 </div>
                 <ul>
                     <li>Researched prototype-based classification using <strong>computer vision</strong> to boost model performance and interpretability</li>
@@ -26,14 +28,16 @@ const Experience = () => {
         </>,
         <>
             <h1>Software Engineering Intern</h1>
-            <div className="listheader">
+            <div class="listheader">
                 <div class="organization">
                     <a href="https://www.hagerty.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/hagerty.png" alt="Hagerty Logo" class="logo" />
-                        <p className="name">Hagerty &#8599;</p>
+                        <div class="logocontainer">
+                            <img src="images/hagerty.png" alt="Hagerty Logo" class="logo" />
+                        </div>
+                        <p class="name">Hagerty &#8599;</p>
                     </a>
                 </div>
-                <p className="date">May 2024 - August 2024</p>
+                <p class="date">May 2024 - August 2024</p>
             </div>
             
             <ul>
@@ -45,16 +49,16 @@ const Experience = () => {
         </>,
         <>
             <h1>Software Engineering Intern</h1>
-            <div className="listheader">
+            <div class="listheader">
                 <div class="organization">
                     <a href="https://broadsword.com/" target="_blank" rel="noopener noreferrer">
-                        <div class="imgcontainer">
+                        <div class="logocontainer">
                             <img src="images/broadsword.png" alt="Broadsword Logo" class="logo" />
                         </div>
-                        <p className="name">Broadsword Online Games &#8599;</p>
+                        <p class="name">Broadsword Online Games &#8599;</p>
                     </a>
                 </div>
-                <p className="date">May 2022 - July 2022</p>
+                <p class="date">May 2022 - July 2022</p>
             </div>
             <ul>
                 <li>Optimized game data collection and search functionality for Dark Age of Camelot, reducing search times by 30%</li>
@@ -66,7 +70,7 @@ const Experience = () => {
     ];
 
     return (
-        <div className="content">
+        <div class="content">
             <ScrollableSections sections={sections} />
         </div>
     )

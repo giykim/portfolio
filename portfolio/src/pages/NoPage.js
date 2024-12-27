@@ -1,7 +1,7 @@
 import "./NoPage.css";
 
 const NoPage = () => (
-    <div className="content">
+    <div class="content">
         <h2>No Page Found</h2>
     </div>
 );

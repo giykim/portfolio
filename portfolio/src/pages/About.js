@@ -22,14 +22,18 @@ const About = () => {
         </>,
         <>
             <h1>Education</h1>
-            <div className="listheader">
+            <div class="listheader">
                 <div class="organization">
                     <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/duke.png" alt="Duke Logo" class="logo" />
-                        <p className="name">Duke University &#8599;</p>
+                        <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
+                            <div class="logocontainer">
+                                <img src="images/duke.png" alt="Duke Logo" class="logo" />
+                            </div>
+                            <p class="name">Duke University &#8599;</p>
+                        </a>
                     </a>
                 </div>
-                <p className="date">August 2021 - May 2025</p>
+                <p class="date">August 2021 - May 2025</p>
             </div>
             <ul>
                 <li>BS in <strong>Computer Science</strong></li>
@@ -88,7 +92,7 @@ const About = () => {
     ];
 
     return (
-        <div className="content">
+        <div class="content">
             <ScrollableSections sections={sections} />
         </div>
     )

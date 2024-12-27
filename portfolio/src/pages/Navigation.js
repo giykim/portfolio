@@ -15,12 +15,12 @@ const Navigation = () => {
 
     return (
         <>
-            <nav className="navbar">
-                <div className="subnavbar">
+            <nav class="navbar">
+                <div class="subnavbar">
                     <h1><Link to="/">Giyoung's Portfolio</Link></h1>
                     <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
                 </div>
-                <div className="subnavbar">
+                <div class="subnavbar">
                     <Link to="https://github.com/giykim/portfolio" target="_blank" rel="noopener noreferrer">Source Code</Link>
                     <a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
@@ -30,7 +30,7 @@ const Navigation = () => {
                     </a>
                 </div>
             </nav>
-            <ul className={`navlinks ${isOpen ? "open" : ""}`}>
+            <ul class={`navlinks ${isOpen ? "open" : ""}`}>
                 <div onClick={toggleIsOpen}>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
@@ -43,7 +43,7 @@ const Navigation = () => {
                 <Outlet />
             </Ease>
 
-            <footer className="footer">
+            <footer class="footer">
                 <p>© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</p>
             </footer>
         </>

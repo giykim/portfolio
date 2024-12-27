@@ -38,9 +38,9 @@ const Home = () => {
 
     return (
         <div>
-            <div className="content">
+            <div class="content">
                 <ScrollableSections sections={sections} />
-                <div className="home-narrator">
+                <div class="home-narrator">
                 </div>
             </div>
         </div>
