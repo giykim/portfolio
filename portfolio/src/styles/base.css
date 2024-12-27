@@ -40,6 +40,7 @@ body a {
 }
 
 .section p {
+    align-self: center;
     max-width: 80%;
 }
 
@@ -51,6 +52,7 @@ body a {
 .listheader p {
     text-align: left;
     white-space: nowrap;
+    max-width: 80%;
     margin: 0;
 }
 

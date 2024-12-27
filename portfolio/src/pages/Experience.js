@@ -1,17 +1,12 @@
 import ScrollableSections from "../components/ScrollableSections";
-import { motion } from "framer-motion";
 import "./Experience.css";
+import EaseDiv from "../components/EaseDiv";
 
 const Experience = () => {
     const sections = [
         <>
             <h1>Machine Learning Research Assistant</h1>
-            <motion.div
-                initial={{ opacity: 0, transform: "translateY(20px)" }}
-                animate={{ opacity: 1, transform: "translateY(0px)" }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <EaseDiv>
                 <div className="listheader">
                     <p className="organization"><a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">Duke University &#8599;</a></p>
                     <p className="date">May 2023 - Present</p>
@@ -22,7 +17,7 @@ const Experience = () => {
                     <li>Created an active learning system for mammogram lesion segmentation, reducing expert annotation by 44%</li>
                     <li>Building a flexible framework for integrating prototypical-part models, adaptable to various professional domains</li>
                 </ul>
-            </motion.div>
+            </EaseDiv>
         </>,
         <>
             <h1>Software Engineering Intern</h1>

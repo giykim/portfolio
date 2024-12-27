@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { Link, Outlet } from "react-router-dom"
-import { motion } from "framer-motion"
 import { Divide as Hamburger } from "hamburger-react";
 import "./Navigation.css";
+import EaseDiv from "../components/EaseDiv";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,14 +26,9 @@ const Navigation = () => {
                 </div>
             </ul>
 
-            <motion.div
-                initial={{ opacity: 0, transform: "translateY(20px)" }}
-                animate={{ opacity: 1, transform: "translateY(0px)" }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-            >
+            <EaseDiv>
                 <Outlet />
-            </motion.div>
+            </EaseDiv>
 
             <footer className="footer">
                 <p>© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</p>

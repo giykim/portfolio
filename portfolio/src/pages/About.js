@@ -1,24 +1,18 @@
 import ScrollableSections from "../components/ScrollableSections";
-import { motion } from "framer-motion";
 import "./About.css";
+import EaseDiv from "../components/EaseDiv";
 
 const About = () => {
     const sections = [
         <>
             <h1>Summary</h1>
-            <motion.div
-                style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-                initial={{ opacity: 0, transform: "translateY(20px)" }}
-                animate={{ opacity: 1, transform: "translateY(0px)" }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <EaseDiv>
                 <p>
                     I'm a quantitative undergraduate with a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
                     With hands-on experience in <strong>agile development</strong> and advanced research on <strong>interpretable models</strong>, I am eager to apply my skills in a Developer or Research position.
                     My goal is to contribute to innovative projects and initiatives while continuing to grow professionally in a dynamic environment.
                 </p>
-            </motion.div>
+            </EaseDiv>
         </>,
         <>
             <h1>Education</h1>

@@ -1,22 +1,15 @@
 import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
 import ScrollableSections from '../components/ScrollableSections';
 import "./Home.css";
+import EaseDiv from "../components/EaseDiv";
 
 const Home = () => {
     const sections = [
         <>
             <h1>Welcome to My Portfolio!</h1>
-            <motion.div
-                initial={{ opacity: 0, transform: "translateY(20px)" }}
-                animate={{ opacity: 1, transform: "translateY(0px)" }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-                <p>
-                    Hi, I'm <strong>Giyoung</strong>!
-                </p>
-            </motion.div>
+            <EaseDiv>
+                <p>Hi, I'm <strong>Giyoung</strong>!</p>
+            </EaseDiv>
         </>,
         <>
             <h1><Link to="/about">About</Link></h1>
