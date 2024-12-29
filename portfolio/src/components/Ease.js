@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Ease = ({ children }) => {
     return (
-        <motion.div
+        <motion.div class="ease"
             style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}
             initial={{ opacity: 0, transform: "translateY(20px)" }}
             animate={{ opacity: 1, transform: "translateY(0px)" }}

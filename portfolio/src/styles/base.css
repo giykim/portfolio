@@ -3,11 +3,18 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
 }
 
 body a {
     text-decoration: none;
     color: inherit;
+}
+
+code {
+    display: block;
 }
 
 code.h1 {
@@ -46,7 +53,7 @@ code.p {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,7 +70,7 @@ code.p {
     text-align: center;
     animation: typewriter 2s steps(13) 1 normal forwards,
               blink 1s steps(13) infinite normal;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     border-right: 5px solid black;
     display: inline-block;

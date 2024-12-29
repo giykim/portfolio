@@ -16,11 +16,11 @@ const Navigation = () => {
     return (
         <>
             <nav class="navbar">
-                <div class="subnavbar">
+                <div class="leftnavbar">
                     <code class="h2"><Link to="/">Giyoung's Portfolio</Link></code>
                     <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
                 </div>
-                <div class="subnavbar">
+                <div class="rightnavbar">
                     <Link to="https://github.com/giykim/portfolio" target="_blank" rel="noopener noreferrer"><code class="p">Source Code</code></Link>
                     <a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
