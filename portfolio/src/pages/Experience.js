@@ -5,7 +5,7 @@ import Ease from "../components/Ease";
 const Experience = () => {
     const sections = [
         <>
-            <h1>Machine Learning Research Assistant</h1>
+            <div><h1>Machine Learning Research Assistant</h1></div>
             <Ease>
                 <div class="listheader">
                     <div class="organization">
@@ -27,7 +27,7 @@ const Experience = () => {
             </Ease>
         </>,
         <>
-            <h1>Software Engineering Intern</h1>
+            <div><h1>Software Engineering Intern</h1></div>
             <div class="listheader">
                 <div class="organization">
                     <a href="https://www.hagerty.com/" target="_blank" rel="noopener noreferrer">
@@ -48,7 +48,7 @@ const Experience = () => {
             </ul>
         </>,
         <>
-            <h1>Software Engineering Intern</h1>
+            <div><h1>Software Engineering Intern</h1></div>
             <div class="listheader">
                 <div class="organization">
                     <a href="https://broadsword.com/" target="_blank" rel="noopener noreferrer">

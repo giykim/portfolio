@@ -4,7 +4,7 @@ import "./Projects.css";
 const Projects = () => {
     const sections = [
         <>
-            <h1>Mini Amazon</h1>
+            <div><h1>Mini Amazon</h1></div>
             <div class="listheader">
                 <p><a href="https://github.com/giykim/mini-amazon" target="_blank" rel="noopener noreferrer">View the repository &#8599;</a></p>
                 <p class="date">September 2024 - November 2024</p>
@@ -19,7 +19,7 @@ const Projects = () => {
             </div>
         </>,
         <>
-            <h1>Palantir Stock Trading Strategy</h1>
+            <div><h1>Palantir Stock Trading Strategy</h1></div>
             <div class="listheader">
                 <p><a href="https://github.com/giykim/algo-project" target="_blank" rel="noopener noreferrer">View the repository &#8599;</a></p>
                 <p class="date">March 2024 - April 2024</p>

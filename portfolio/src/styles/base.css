@@ -10,12 +10,6 @@ body a {
     color: inherit;
 }
 
-.section-content {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
-
 @keyframes typewriter {
     from {
         width: 0%;
@@ -57,10 +51,12 @@ body a {
     margin-bottom: 10px;
     text-align: center;
     animation: typewriter 2s steps(13) 1 normal forwards,
-              blink 800ms steps(13) infinite normal;
+              blink 1s steps(13) infinite normal;
     white-space: nowrap;
     overflow: hidden;
     border-right: 5px solid black;
+    display: inline-block;
+    min-width: auto;
 }
 
 .listheader {

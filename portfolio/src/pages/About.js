@@ -6,8 +6,8 @@ const About = () => {
     const sections = [
         <>
             <div class="imgcontainer">
-                    <img src="images/profile.png" alt="Profile" />
-                </div>
+                <img src="images/profile.png" alt="Profile" />
+            </div>
             <Ease>
                 <p>
                     I'm a quantitative undergraduate with a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
@@ -23,7 +23,7 @@ const About = () => {
             </Ease>
         </>,
         <>
-            <h1>Education</h1>
+            <div><h1>Education</h1></div>
             <div class="listheader">
                 <div class="organization">
                     <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
@@ -69,7 +69,7 @@ const About = () => {
             
         </>,
         <>
-            <h1><strong>Technical Skills</strong></h1>
+            <div><h1>Technical Skills</h1></div>
             <ul>
                 <li><strong>Languages: </strong>Python, C#, C/C++, Java, SQL (Postgres), R, JavaScript, HTML/CSS</li>
                 <li><strong>Frameworks: </strong> .NET, Flask, React, Node.js, Material-UI</li>
@@ -78,7 +78,7 @@ const About = () => {
             </ul>
         </>,
         <>
-            <h1><strong>Contact</strong></h1>
+            <div><h1>Contact</h1></div>
             <ul>
                 <li>
                     <strong>Email: </strong><a href="mailto:gk122@duke.edu">gk122@duke.edu &#8599;</a>
