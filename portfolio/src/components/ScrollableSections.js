@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { scroller } from 'react-scroll';
+import "./ScrollableSections.css"
 
 const ScrollableSections = ({ sections }) => {
     const [currentSection, setCurrentSection] = useState(0);

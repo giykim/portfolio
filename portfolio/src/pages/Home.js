@@ -8,7 +8,7 @@ const Home = () => {
         <>
             <div class="section-content">
                 {/* <FloatingImages /> */}
-                <h1>Welcome to My Portfolio!</h1>
+                <h1>Welcome to My Portfolio</h1>
                 <Ease>
                     <p>
                         Hi, I'm <strong>Giyoung</strong>, a passionate and driven undergraduate student at Duke University.
@@ -40,10 +40,8 @@ const Home = () => {
     ];
 
     return (
-        <div>
-            <div class="content">
-                <ScrollableSections sections={sections} />
-            </div>
+        <div class="content">
+            <ScrollableSections sections={sections} />
         </div>
     )
 };

@@ -10,20 +10,30 @@ body a {
     color: inherit;
 }
 
-.content {
-    min-height: 100vh;
+.section-content {
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-self: center;
-    gap: 0.5rem;
-    max-width: 50rem;
 }
 
-.section-content {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: black;
+    }
+
+    to {
+        border-color: transparent;
+    }
 }
 
 .section {
@@ -33,8 +43,7 @@ body a {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-content: center;
-    align-self: center;
+    align-items: center;
     text-align: center;
     flex-direction: column;
     text-shadow: 5px 5px 10px rgba(75, 75, 75, 0.2);
@@ -46,6 +55,12 @@ body a {
     font-weight: bold;
     margin-top: 100px;
     margin-bottom: 10px;
+    text-align: center;
+    animation: typewriter 2s steps(13) 1 normal forwards,
+              blink 800ms steps(13) infinite normal;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid black;
 }
 
 .listheader {
