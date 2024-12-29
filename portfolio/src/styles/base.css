@@ -10,6 +10,18 @@ body a {
     color: inherit;
 }
 
+code.h1 {
+    font-size: 5rem;
+}
+
+code.h2 {
+    font-size: 30px;
+}
+
+code.p {
+    font-size: 20px;
+}
+
 @keyframes typewriter {
     from {
         width: 0%;
@@ -43,8 +55,7 @@ body a {
     text-shadow: 5px 5px 10px rgba(75, 75, 75, 0.2);
 }
 
-.section h1 {
-    font-size: 4rem;
+.section code.h1 {
     letter-spacing: 1px;
     font-weight: bold;
     margin-top: 100px;
@@ -65,7 +76,7 @@ body a {
     flex-direction: column;
 }
 
-.listheader p {
+.listheader code.p {
     align-self: left;
     text-align: left;
     white-space: nowrap;
@@ -116,6 +127,8 @@ ul {
     height: 250px;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 .imgcontainer img {

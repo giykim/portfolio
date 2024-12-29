@@ -17,11 +17,11 @@ const Navigation = () => {
         <>
             <nav class="navbar">
                 <div class="subnavbar">
-                    <h1><Link to="/">Giyoung's Portfolio</Link></h1>
+                    <code class="h2"><Link to="/">Giyoung's Portfolio</Link></code>
                     <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
                 </div>
                 <div class="subnavbar">
-                    <Link to="https://github.com/giykim/portfolio" target="_blank" rel="noopener noreferrer">Source Code</Link>
+                    <Link to="https://github.com/giykim/portfolio" target="_blank" rel="noopener noreferrer"><code class="p">Source Code</code></Link>
                     <a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
@@ -32,10 +32,10 @@ const Navigation = () => {
             </nav>
             <ul class={`navlinks ${isOpen ? "open" : ""}`}>
                 <div onClick={toggleIsOpen}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/experience">Experience</Link></li>
-                    <li><Link to="/projects">Projects</Link></li>
+                    <li><code class="p"><Link to="/">Home</Link></code></li>
+                    <li><code class="p"><Link to="/about">About</Link></code></li>
+                    <li><code class="p"><Link to="/experience">Experience</Link></code></li>
+                    <li><code class="p"><Link to="/projects">Projects</Link></code></li>
                 </div>
             </ul>
 
@@ -44,7 +44,7 @@ const Navigation = () => {
             </Ease>
 
             <footer class="footer">
-                <p>© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</p>
+                <code class="p">© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</code>
             </footer>
         </>
     )

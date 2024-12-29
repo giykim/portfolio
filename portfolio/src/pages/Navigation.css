@@ -10,6 +10,7 @@
     width: 100%;
     z-index: 2;
     justify-content: space-between;
+    padding: 15px 0;
 }
 
 .subnavbar {
@@ -18,10 +19,6 @@
     align-items: center;
     gap: 15px;
     margin: 0 20px;
-}
-
-.subnavbar h1 {
-    font-weight: 600;
 }
 
 .subnavbar svg {
@@ -72,9 +69,10 @@
     background-color: #202020;
     opacity: 0.9;
     z-index: 2;
+    padding: 15px;
 }
 
-.footer p {
+.footer code {
     color: #ffffff;
     font-size: 14px;
 }

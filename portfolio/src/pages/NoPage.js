@@ -6,9 +6,9 @@ import Ease from "../components/Ease";
 const NoPage = () => {
     const sections = [
         <>
-            <div><h1>No Page Found</h1></div>
+            <div><code class="h1">No Page Found</code></div>
             <Ease>
-                <p><Link to="/">Return to Home</Link></p>
+                <code class="p"><Link to="/">Return to Home</Link></code>
             </Ease>
         </>,
     ];
