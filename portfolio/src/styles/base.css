@@ -20,6 +20,12 @@ body a {
     max-width: 50rem;
 }
 
+.section-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
 .section {
     top: 0;
     left: 0;
