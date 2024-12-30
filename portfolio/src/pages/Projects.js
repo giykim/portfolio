@@ -22,7 +22,7 @@ const Projects = () => {
             </Ease>
         </>,
         <>
-            <div><code className="h1">Palantir Stock Trading Strategy</code></div>
+            <div><code className="h1">PLTR Trade Strategy</code></div>
             <div>
                 <div className="listheader">
                     <code className="p"><a href="https://github.com/giykim/algo-project" target="_blank" rel="noopener noreferrer">View repository &#8599;</a></code>
