@@ -27,13 +27,13 @@ const FloatingImages = ({ images }) => {
     }, []);
 
     return (
-        <div class="floating-images">
+        <div className="floating-images">
             {positions.map((position, index) => (
                 <img
                     key={index}
                     src={`images/picture${index + 1}.png`}
                     alt={`Floating Image ${index + 1}`}
-                    class="floating-image"
+                    className="floating-image"
                     style={{
                         top: `${position.top}px`,
                         left: `${position.left}px`,

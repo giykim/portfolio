@@ -6,15 +6,15 @@ import Ease from "../components/Ease";
 const NoPage = () => {
     const sections = [
         <>
-            <div><code class="h1">No Page Found</code></div>
+            <div><code className="h1">No Page Found</code></div>
             <Ease>
-                <code class="p"><Link to="/">Return to Home</Link></code>
+                <code className="p"><Link to="/">Return to Home</Link></code>
             </Ease>
         </>,
     ];
 
     return (
-        <div class="content">
+        <div className="content">
             <ScrollableSections sections={sections} />
         </div>
     )

@@ -17,12 +17,10 @@ const ScrollableSections = ({ sections }) => {
     };
 
     const handleScroll = (e) => {
-        e.preventDefault();
-
         scrollTotal += e.deltaY
 
         if (scrollTotal > threshold) {
-            if (currentSection < totalSections) {
+            if (currentSection < totalSections - 1) {
                 setCurrentSection(currentSection + 1);
                 scrollToSection(currentSection + 1);
             }
@@ -37,7 +35,7 @@ const ScrollableSections = ({ sections }) => {
     }
 
     useEffect(() => {
-        window.addEventListener("wheel", handleScroll);
+        window.addEventListener('wheel', handleScroll);
 
         return () => {
             window.removeEventListener("wheel", handleScroll);
@@ -45,9 +43,9 @@ const ScrollableSections = ({ sections }) => {
     }, [currentSection]);
 
     return (
-        <div class="scrollable-sections">
+        <div className="scrollable-sections">
             {sections.map((section, index) => (
-                <div class="section" id={`section${index}`} key={index}>
+                <div className="section" id={`section${index}`} key={index}>
                     {section}
                 </div>
             ))}
