@@ -24,49 +24,51 @@ const About = () => {
         </>,
         <>
             <div><code class="h1">Education</code></div>
-            <div class="listheader">
-                <div class="organization">
-                    <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
+
+            <div>
+                <div class="listheader">
+                    <div class="organization">
                         <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
-                            <div class="logocontainer">
-                                <img src="images/duke.png" alt="Duke Logo" class="logo" />
-                            </div>
-                            <code class="p name">Duke University &#8599;</code>
+                            <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
+                                <div class="logocontainer">
+                                    <img src="images/duke.png" alt="Duke Logo" class="logo" />
+                                </div>
+                                <code class="p name">Duke University &#8599;</code>
+                            </a>
                         </a>
-                    </a>
+                    </div>
+                    <code class="p date">August 2021 - May 2025</code>
                 </div>
-                <code class="p date">August 2021 - May 2025</code>
+                <ul>
+                    <li><code class="p">BS in <strong>Computer Science</strong></code></li>
+                    <li><code class="p">
+                        Data Structures and Algorithms,
+                        Design and Analysis of Algorithms,
+                        Computer Architecture,
+                        Intro to Data Science,
+                        Intro to Database Systems,
+                        Intro to AI,
+                        Theory and Algorithms for Machine Learning, 
+                        Design and Testing of Algorithmic Trading Systems
+                    </code></li>
+                    <li><code class="p">BS in <strong>Statistical Science</strong></code></li>
+                    <li><code class="p">
+                        Regression Analysis,
+                        Math of Regression,
+                        Probability,
+                        Machine Learning and Data Mining,
+                        Statistical Learning and Inference,
+                        Intro to Bayesian Statistics
+                    </code></li>
+                    <li><code class="p"><strong>Mathematics</strong> Minor</code></li>
+                    <li><code class="p">
+                        Linear Algebra and Applications,
+                        Multivariable Calculus,
+                        Ordinary and Differential Equations,
+                        Applied Stochastic Processes
+                    </code></li>
+                </ul>
             </div>
-            <ul>
-                <li><code class="p">BS in <strong>Computer Science</strong></code></li>
-                <li><code class="p">
-                    Data Structures and Algorithms,
-                    Design and Analysis of Algorithms,
-                    Computer Architecture,
-                    Intro to Data Science,
-                    Intro to Database Systems,
-                    Intro to AI,
-                    Theory and Algorithms for Machine Learning, 
-                    Design and Testing of Algorithmic Trading Systems
-                </code></li>
-                <li><code class="p">BS in <strong>Statistical Science</strong></code></li>
-                <li><code class="p">
-                    Regression Analysis,
-                    Math of Regression,
-                    Probability,
-                    Machine Learning and Data Mining,
-                    Statistical Learning and Inference,
-                    Intro to Bayesian Statistics
-                </code></li>
-                <li><code class="p"><strong>Mathematics</strong> Minor</code></li>
-                <li><code class="p">
-                    Linear Algebra and Applications,
-                    Multivariable Calculus,
-                    Ordinary and Differential Equations,
-                    Applied Stochastic Processes
-                </code></li>
-            </ul>
-            
         </>,
         <>
             <div><code class="h1">Technical Skills</code></div>

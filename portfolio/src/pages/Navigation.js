@@ -39,7 +39,7 @@ const Navigation = () => {
                 </div>
             </ul>
 
-            <Ease>
+            <Ease class="container">
                 <Outlet />
             </Ease>
 
