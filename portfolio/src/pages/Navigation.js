@@ -17,7 +17,9 @@ const Navigation = () => {
         <>
             <nav className="navbar">
                 <div className="leftnavbar">
-                    <code className="h2"><Link to="/">Giyoung's Portfolio</Link></code>
+                    <div onClick={toggleIsOpen}>
+                        <code className="h2"><Link to="/">Giyoung's Portfolio</Link></code>
+                    </div>
                     <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
                 </div>
                 <div className="rightnavbar">
