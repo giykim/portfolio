@@ -49,3 +49,12 @@ const Projects = () => {
 };
 
 export default Projects
+
+// High School Project
+// Games (Growing Up, FPS)
+// Stats Projects (210, 325, 671)
+// Fish AI
+
+// Future:
+// Trading app
+// Workout progress app
