@@ -6,7 +6,7 @@ const ScrollableSections = ({ sections }) => {
     const [currentSection, setCurrentSection] = useState(0);
     const totalSections = sections.length;
     let scrollTotal = 0;
-    const threshold = 50;
+    const threshold = 200;
 
     const scrollToSection = (section) => {
         scroller.scrollTo(`section${section}`, {
