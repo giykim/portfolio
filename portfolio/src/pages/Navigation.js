@@ -13,11 +13,15 @@ const Navigation = () => {
         setIsOpen(!isOpen);
     };
 
+    const open = () => {
+        setIsOpen(false);
+    }
+
     return (
         <>
             <nav className="navbar">
                 <div className="leftnavbar">
-                    <div onClick={toggleIsOpen}>
+                    <div onClick={open}>
                         <code className="h2"><Link to="/">Giyoung's Portfolio</Link></code>
                     </div>
                     <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
