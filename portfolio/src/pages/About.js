@@ -15,9 +15,10 @@ const About = () => {
                     I'm passionate about leveraging AI-driven techniques and contributing to innovative projects in dynamic environments.
                 </code>
                 <code className="p">
-                    Outside of my technical pursuits, I have a passion for weightlifting, gaming, and listening to music.
+                    Outside of my technical pursuits, I have a passion for weightlifting, gaming, and watching TV.
+                    Some of my favorite shows are <strong>The Simpsons</strong>, <strong>Bojack Horseman</strong>, and <strong>Breaking Bad</strong>.
                     Growing up, I swam and played the piano, and I continually strive to revisit these activities alongside exploring new hobbies.
-                    Recently, I've been exploring fashion, running, and learning to play the guitar.
+                    Recently, I've been exploring fashion, running, climbing, and listening to music.
                     These interests help me maintain a balanced and creative lifestyle.
                 </code>
             </Ease>
