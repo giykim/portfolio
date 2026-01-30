@@ -10,7 +10,7 @@ const About = () => {
             </div>
             <Ease>
                 <code className="p">
-                    I'm a software engineer with experience at <strong>Amazon</strong> and a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
+                    I'm a recent <strong>Duke University</strong> graduate and software engineer with experience at <strong>Amazon</strong> and a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
                     With hands-on experience building full-stack applications, automated workflows, and <strong>interpretable ML models</strong>, I bring expertise in cloud services, CI/CD, and scalable system design.
                     I'm passionate about leveraging AI-driven techniques and contributing to innovative projects in dynamic environments.
                 </code>
