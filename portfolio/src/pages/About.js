@@ -78,6 +78,14 @@ const About = () => {
             </ul>
         </>,
         <>
+            <div><code className="h1">Publications</code></div>
+            <ul>
+                <li><code className="p">
+                    <strong>Google Scholar: </strong><a href="https://scholar.google.com/citations?user=cUceUnMAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">scholar.google.com &#8599;</a>
+                </code></li>
+            </ul>
+        </>,
+        <>
             <div><code className="h1">Contact</code></div>
             <ul>
                 <li><code className="p">
