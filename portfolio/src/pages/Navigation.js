@@ -21,13 +21,26 @@ const Navigation = () => {
         <>
             <nav className="navbar">
                 <div className="leftnavbar">
-                    <div onClick={open}>
+                    <button
+                        onClick={open}
+                        className="nav-home-btn"
+                        aria-label="Go to home page"
+                    >
                         <code className="h2"><Link to="/">Giyoung's Portfolio</Link></code>
+                    </button>
+                    <div
+                        aria-label="Toggle navigation menu"
+                        aria-expanded={isOpen}
+                        className="hamburger-btn"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && toggleIsOpen()}
+                    >
+                        <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
                     </div>
-                    <Hamburger color="white" toggled={isOpen} toggle={toggleIsOpen} />
                 </div>
                 <div className="rightnavbar">
-                    <Link to="https://github.com/giykim/portfolio" target="_blank" rel="noopener noreferrer"><code className="p">Source Code</code></Link>
+                    <a href="https://github.com/giykim/portfolio" target="_blank" rel="noopener noreferrer"><code className="p">Source Code</code></a>
                     <a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
@@ -36,13 +49,11 @@ const Navigation = () => {
                     </a>
                 </div>
             </nav>
-            <ul className={`navlinks ${isOpen ? "open" : ""}`}>
-                <div onClick={toggleIsOpen}>
-                    <li><code className="p"><Link to="/">Home</Link></code></li>
-                    <li><code className="p"><Link to="/about">About</Link></code></li>
-                    <li><code className="p"><Link to="/experience">Experience</Link></code></li>
-                    <li><code className="p"><Link to="/projects">Projects</Link></code></li>
-                </div>
+            <ul className={`navlinks ${isOpen ? "open" : ""}`} role="navigation" aria-label="Main navigation">
+                <li onClick={toggleIsOpen}><code className="p"><Link to="/">Home</Link></code></li>
+                <li onClick={toggleIsOpen}><code className="p"><Link to="/about">About</Link></code></li>
+                <li onClick={toggleIsOpen}><code className="p"><Link to="/experience">Experience</Link></code></li>
+                <li onClick={toggleIsOpen}><code className="p"><Link to="/projects">Projects</Link></code></li>
             </ul>
 
             <Ease>

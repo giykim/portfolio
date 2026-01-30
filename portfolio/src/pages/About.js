@@ -10,9 +10,9 @@ const About = () => {
             </div>
             <Ease>
                 <code className="p">
-                    I'm a quantitative undergraduate with a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
-                    With hands-on experience in <strong>agile development</strong> and advanced research on <strong>interpretable models</strong>, I am eager to apply my skills in a Developer or Research position.
-                    My goal is to contribute to innovative projects and initiatives while continuing to grow professionally in a dynamic environment.
+                    I'm a software engineer with experience at <strong>Amazon</strong> and a strong foundation in <strong>software engineering</strong>, <strong>machine learning</strong>, and <strong>statistical modeling</strong>.
+                    With hands-on experience building full-stack applications, automated workflows, and <strong>interpretable ML models</strong>, I bring expertise in cloud services, CI/CD, and scalable system design.
+                    I'm passionate about leveraging AI-driven techniques and contributing to innovative projects in dynamic environments.
                 </code>
                 <code className="p">
                     Outside of my technical pursuits, I have a passion for weightlifting, gaming, and listening to music.
@@ -29,12 +29,10 @@ const About = () => {
                 <div className="listheader">
                     <div className="organization">
                         <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
-                            <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
-                                <div className="logocontainer">
-                                    <img src="images/duke.png" alt="Duke Logo" className="logo" />
-                                </div>
-                                <code className="p name">Duke University &#8599;</code>
-                            </a>
+                            <div className="logocontainer">
+                                <img src="images/duke.png" alt="Duke Logo" className="logo" />
+                            </div>
+                            <code className="p name">Duke University &#8599;</code>
                         </a>
                     </div>
                     <code className="p date">August 2021 - May 2025</code>
@@ -73,17 +71,16 @@ const About = () => {
         <>
             <div><code className="h1">Technical Skills</code></div>
             <ul>
-                <li><code className="p"><strong>Languages: </strong>Python, C#, C/C++, Java, SQL (Postgres), R, JavaScript, HTML/CSS</code></li>
-                <li><code className="p"><strong>Frameworks: </strong> .NET, Flask, React, Node.js, Material-UI</code></li>
-                <li><code className="p"><strong>Developer Tools: </strong>Git, Azure, Docker, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse</code></li>
-                <li><code className="p"><strong>Libraries: </strong>NumPy, pandas, Scikit-learn, PyTorch, TensorFlow, Selenium, BeautifulSoup, Matplotlib, Plotly Das</code></li>
+                <li><code className="p"><strong>Languages: </strong>Java, Python, JavaScript, C#, C++</code></li>
+                <li><code className="p"><strong>Databases: </strong>MongoDB, DynamoDB, PostgreSQL</code></li>
+                <li><code className="p"><strong>Cloud &amp; DevOps: </strong>AWS (Lambda, ECS, Step Functions, CloudFormation, CloudWatch), Docker, Git, Azure</code></li>
             </ul>
         </>,
         <>
             <div><code className="h1">Contact</code></div>
             <ul>
                 <li><code className="p">
-                    <strong>Email: </strong><a href="mailto:gk122@duke.edu">gk122@duke.edu &#8599;</a>
+                    <strong>Email: </strong><a href="mailto:giy.kim27@gmail.com">giy.kim27@gmail.com &#8599;</a>
                 </code></li>
                 <li><code className="p">
                     <strong>LinkedIn: </strong><a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">linkedin.com/in/giyoung-kim &#8599;</a>

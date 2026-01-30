@@ -1,38 +1,44 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { scroller } from 'react-scroll';
 import "./ScrollableSections.css"
 
 const ScrollableSections = ({ sections }) => {
     const [currentSection, setCurrentSection] = useState(0);
     const totalSections = sections.length;
-    let scrollTotal = 0;
+    const scrollTotalRef = useRef(0);
     const threshold = 200;
 
-    const scrollToSection = (section) => {
+    const scrollToSection = useCallback((section) => {
         scroller.scrollTo(`section${section}`, {
             smooth: true,
             duration: 500,
             offset: 0,
         });
-    };
+    }, []);
 
-    const handleScroll = (e) => {
-        scrollTotal += e.deltaY
+    const handleScroll = useCallback((e) => {
+        scrollTotalRef.current += e.deltaY;
 
-        if (scrollTotal > threshold) {
-            if (currentSection < totalSections - 1) {
-                setCurrentSection(currentSection + 1);
-                scrollToSection(currentSection + 1);
-            }
-            scrollTotal = 0;
-        } else if (scrollTotal < -threshold) {
-            if (currentSection > 0) {
-                setCurrentSection(currentSection - 1);
-                scrollToSection(currentSection - 1);
-            }
-            scrollTotal = 0;
+        if (scrollTotalRef.current > threshold) {
+            setCurrentSection(prev => {
+                if (prev < totalSections - 1) {
+                    scrollToSection(prev + 1);
+                    return prev + 1;
+                }
+                return prev;
+            });
+            scrollTotalRef.current = 0;
+        } else if (scrollTotalRef.current < -threshold) {
+            setCurrentSection(prev => {
+                if (prev > 0) {
+                    scrollToSection(prev - 1);
+                    return prev - 1;
+                }
+                return prev;
+            });
+            scrollTotalRef.current = 0;
         }
-    }
+    }, [totalSections, scrollToSection]);
 
     useEffect(() => {
         window.addEventListener('wheel', handleScroll);
@@ -40,12 +46,12 @@ const ScrollableSections = ({ sections }) => {
         return () => {
             window.removeEventListener("wheel", handleScroll);
         };
-    }, [currentSection]);
+    }, [handleScroll]);
 
     return (
         <div className="scrollable-sections">
             {sections.map((section, index) => (
-                <div className="section" id={`section${index}`} key={index}>
+                <div className="section" id={`section${index}`} key={`section-${index}`}>
                     {section}
                 </div>
             ))}

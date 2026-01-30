@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./FloatingImages.css";
 
 const FloatingImages = ({ images }) => {
@@ -6,6 +6,8 @@ const FloatingImages = ({ images }) => {
 
     useEffect(() => {
         const container = document.querySelector(".floating-images");
+        if (!container) return;
+
         const containerWidth = container.clientWidth;
         const containerHeight = container.clientHeight;
 
@@ -24,13 +26,13 @@ const FloatingImages = ({ images }) => {
         const interval = setInterval(generatePositions, 3000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [images]);
 
     return (
         <div className="floating-images">
             {positions.map((position, index) => (
                 <img
-                    key={index}
+                    key={`floating-${index}`}
                     src={`images/picture${index + 1}.png`}
                     alt={`Floating Image ${index + 1}`}
                     className="floating-image"

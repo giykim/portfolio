@@ -17,7 +17,7 @@ const Projects = () => {
                     <li><code className="p">Developed responsive UI/UX with HTML, CSS, and JavaScript for seamless user interaction</code></li>
                 </ul>
                 <div className="imgcontainer">
-                    <img src="images/amazon.png" alt="Project Image" />
+                    <img src="images/amazon.png" alt="Mini Amazon e-commerce project screenshot" />
                 </div>
             </Ease>
         </>,
@@ -35,7 +35,7 @@ const Projects = () => {
                     <li><code className="p">Designed a buy/sell algorithm with performance analysis to filter underperforming trades based on historical data</code></li>
                 </ul>
                 <div className="imgcontainer">
-                    <img src="images/palantir.png" alt="Project Image" />
+                    <img src="images/palantir.png" alt="PLTR trading strategy visualization" />
                 </div>
             </div>
         </>,
@@ -49,12 +49,3 @@ const Projects = () => {
 };
 
 export default Projects
-
-// High School Project
-// Games (Growing Up, FPS)
-// Stats Projects (210, 325, 671)
-// Fish AI
-
-// Future:
-// Trading app
-// Workout progress app
