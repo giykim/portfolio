@@ -41,7 +41,7 @@ function Layout() {
 
 function App() {
     return (
-        <BrowserRouter basename="/portfolio">
+        <BrowserRouter>
             <Layout />
         </BrowserRouter>
     );

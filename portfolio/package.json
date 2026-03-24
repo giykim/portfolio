@@ -58,8 +58,7 @@
     "rollup": "^4.60.0",
     "flatted": "^3.4.2",
     "serialize-javascript": "^7.0.4",
-    "ajv": "^8.18.0",
-    "qs": "^6.15.0",
+"qs": "^6.15.0",
     "underscore": "^1.13.8"
   }
 }
