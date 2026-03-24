@@ -1,9 +1,9 @@
 # Build stage
 FROM node:18-alpine AS build
 WORKDIR /app
-COPY package*.json ./
+COPY portfolio/package*.json ./
 RUN npm install
-COPY . .
+COPY portfolio/ .
 RUN npm run build
 
 # Serve stage
