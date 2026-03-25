@@ -19,7 +19,7 @@
     align-items: center;
     gap: 10px;
     color: white;
-    padding: 20px;
+    padding: 8px 20px;
     margin: 0;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .rightnavbar svg {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .navlinks {
@@ -71,7 +71,7 @@
     text-decoration: none;
     color: #ffffff;
     opacity: 1;
-    font-size: 34px;
+    font-size: 27px;
     font-weight: 500;
     padding: 10px;
     transition: color 0.3s;
@@ -92,10 +92,10 @@
     background-color: #202020;
     opacity: 0.9;
     z-index: 2;
-    padding: 15px;
+    padding: 8px;
 }
 
 .footer code {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
 }

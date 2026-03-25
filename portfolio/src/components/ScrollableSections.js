@@ -73,6 +73,7 @@ const ScrollableSections = ({ sections }) => {
     const animateTo = useCallback((to) => {
         if (to < 0 || to >= total) return;
         cancelAnim();
+        isTransitioningRef.current = false;
         animateOut(to, outProgressRef.current);
     }, [total, cancelAnim, animateOut]);
 
