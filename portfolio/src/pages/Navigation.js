@@ -19,7 +19,7 @@ const Navigation = () => {
     }
 
     return (
-        <>
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
             <nav className="navbar">
                 <div className="leftnavbar">
                     <button
@@ -57,7 +57,7 @@ const Navigation = () => {
                 <li onClick={toggleIsOpen}><code className="p"><Link to="/about">About</Link></code></li>
             </ul>
 
-            <div style={{ position: 'relative', height: 'calc(100vh - 83px)', overflow: 'hidden' }}>
+            <div style={{ position: 'relative', flex: 1, overflow: 'hidden' }}>
                 <AnimatePresence>
                     <motion.div
                         key={location.pathname}
@@ -75,7 +75,7 @@ const Navigation = () => {
             <footer className="footer">
                 <code className="p">© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</code>
             </footer>
-        </>
+        </div>
     )
 };
 
