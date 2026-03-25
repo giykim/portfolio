@@ -12,11 +12,11 @@ const About = () => {
                 <code className="p">
                     I'm a Software Development Engineer at <strong>AWS</strong> with dual B.S. degrees in Computer Science and Statistical Science from <strong>Duke University</strong>, passionate about using ML and AI to build better customer experiences.
                 </code>
-                <code className="p">
-                    Outside of my work: building ML / AI projects, Counter-Strike, weightlifting, bouldering,
-                    Favorite shows: The Simpsons, Bojack Horseman, Breaking Bad
-                    Interests: Watches, FC Barcelona
-                </code>
+                <ul>
+                    <li><code className="p">Personal: building ML / AI projects, Counter-Strike, weightlifting, bouldering</code></li>
+                    <li><code className="p">Shows: The Simpsons, Bojack Horseman, Breaking Bad</code></li>
+                    <li><code className="p">Interests: Watches, FC Barcelona</code></li>
+                </ul>
             </Ease>
         </>,
         <>
