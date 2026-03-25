@@ -1,62 +1,182 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { scroller } from 'react-scroll';
-import "./ScrollableSections.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import "./ScrollableSections.css";
+
+const SCROLL_THRESHOLD = 800;
+const FADE_OUT_DURATION = 250;
+const FADE_IN_DURATION = 350;
 
 const ScrollableSections = ({ sections }) => {
-    const [currentSection, setCurrentSection] = useState(0);
-    const totalSections = sections.length;
-    const scrollTotalRef = useRef(0);
-    const threshold = 200;
+    const total = sections.length;
+    const currentRef = useRef(0);
+    const [current, setCurrentState] = useState(0);
+    // trans: { to, outProgress (0→1), inProgress (0→1) }
+    const [trans, setTrans] = useState(null);
 
-    const scrollToSection = useCallback((section) => {
-        scroller.scrollTo(`section${section}`, {
-            smooth: true,
-            duration: 500,
-            offset: 0,
-        });
+    const scrollAccumRef = useRef(0);
+    const directionRef = useRef(0);
+    const outProgressRef = useRef(0);
+    const toRef = useRef(null);
+    const isTransitioningRef = useRef(false);
+    const animFrameRef = useRef(null);
+
+    const cancelAnim = useCallback(() => {
+        if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
     }, []);
 
-    const handleScroll = useCallback((e) => {
-        scrollTotalRef.current += e.deltaY;
+    const setCurrent = useCallback((val) => {
+        currentRef.current = val;
+        setCurrentState(val);
+    }, []);
 
-        if (scrollTotalRef.current > threshold) {
-            setCurrentSection(prev => {
-                if (prev < totalSections - 1) {
-                    scrollToSection(prev + 1);
-                    return prev + 1;
-                }
-                return prev;
-            });
-            scrollTotalRef.current = 0;
-        } else if (scrollTotalRef.current < -threshold) {
-            setCurrentSection(prev => {
-                if (prev > 0) {
-                    scrollToSection(prev - 1);
-                    return prev - 1;
-                }
-                return prev;
-            });
-            scrollTotalRef.current = 0;
+    // Phase 2: next section mounted fresh here — animation triggers on mount
+    const startFadeIn = useCallback((to) => {
+        isTransitioningRef.current = true;
+        const start = performance.now();
+        const tick = (now) => {
+            const inProgress = Math.min((now - start) / FADE_IN_DURATION, 1);
+            setTrans({ to, outProgress: 1, inProgress });
+            if (inProgress < 1) {
+                animFrameRef.current = requestAnimationFrame(tick);
+            } else {
+                setCurrent(to);
+                setTrans(null);
+                scrollAccumRef.current = 0;
+                directionRef.current = 0;
+                outProgressRef.current = 0;
+                toRef.current = null;
+                isTransitioningRef.current = false;
+            }
+        };
+        animFrameRef.current = requestAnimationFrame(tick);
+    }, [setCurrent]);
+
+    const animateOut = useCallback((to, fromProgress) => {
+        if (isTransitioningRef.current) return;
+        isTransitioningRef.current = true;
+        toRef.current = to;
+        const duration = FADE_OUT_DURATION * (1 - fromProgress);
+        const start = performance.now();
+        const tick = (now) => {
+            const t = Math.min((now - start) / Math.max(duration, 1), 1);
+            const outProgress = fromProgress + (1 - fromProgress) * t;
+            outProgressRef.current = outProgress;
+            setTrans({ to, outProgress, inProgress: 0 });
+            if (t < 1) {
+                animFrameRef.current = requestAnimationFrame(tick);
+            } else {
+                startFadeIn(to);
+            }
+        };
+        animFrameRef.current = requestAnimationFrame(tick);
+    }, [startFadeIn]);
+
+    const animateTo = useCallback((to) => {
+        if (to < 0 || to >= total) return;
+        cancelAnim();
+        animateOut(to, outProgressRef.current);
+    }, [total, cancelAnim, animateOut]);
+
+    const handleScroll = useCallback((e) => {
+        e.preventDefault();
+        if (isTransitioningRef.current) return;
+
+        const delta = e.deltaY;
+        const newDir = delta > 0 ? 1 : -1;
+
+        if (directionRef.current !== 0 && directionRef.current !== newDir) {
+            scrollAccumRef.current = 0;
+            directionRef.current = 0;
+            outProgressRef.current = 0;
+            toRef.current = null;
+            setTrans(null);
+            return;
         }
-    }, [totalSections, scrollToSection]);
+
+        directionRef.current = newDir;
+        scrollAccumRef.current += delta;
+
+        const to = currentRef.current + newDir;
+        if (to < 0 || to >= total) { scrollAccumRef.current = 0; return; }
+
+        toRef.current = to;
+        const outProgress = Math.min(Math.abs(scrollAccumRef.current) / SCROLL_THRESHOLD, 1);
+        outProgressRef.current = outProgress;
+        setTrans({ to, outProgress, inProgress: 0 });
+
+        if (outProgress >= 1) {
+            startFadeIn(to);
+        }
+    }, [total, startFadeIn]);
 
     useEffect(() => {
-        window.addEventListener('wheel', handleScroll);
-
-        return () => {
-            window.removeEventListener("wheel", handleScroll);
-        };
+        window.addEventListener('wheel', handleScroll, { passive: false });
+        return () => window.removeEventListener('wheel', handleScroll);
     }, [handleScroll]);
+
+    useEffect(() => () => cancelAnim(), [cancelAnim]);
+
+    // Render only one section at a time:
+    // - fade-out phase: current section fading out (next NOT mounted yet)
+    // - fade-in phase: next section mounting fresh with active class (animation triggers)
+    // - idle: current section with active class
+    const renderSection = () => {
+        if (!trans) {
+            return (
+                <div key={`s-${current}`} className="section" style={{ opacity: 1 }}>
+                    {sections[current]}
+                </div>
+            );
+        }
+        if (trans.outProgress < 1) {
+            return (
+                <div key={`s-${current}`} className="section" style={{ opacity: 1 - trans.outProgress }}>
+                    {sections[current]}
+                </div>
+            );
+        }
+        // fade-in: next section mounts here for the first time this visit
+        return (
+            <div key={`s-${trans.to}`} className="section" style={{ opacity: trans.inProgress }}>
+                {sections[trans.to]}
+            </div>
+        );
+    };
 
     return (
         <div className="scrollable-sections">
-            {sections.map((section, index) => (
-                <div className="section" id={`section${index}`} key={`section-${index}`}>
-                    {section}
-                </div>
-            ))}
+            {renderSection()}
+
+            <div className="section-dots">
+                {sections.map((_, index) => (
+                    <button
+                        key={index}
+                        className={`dot${index === current ? ' active' : ''}`}
+                        onClick={() => animateTo(index)}
+                        aria-label={`Go to section ${index + 1}`}
+                    />
+                ))}
+            </div>
+
+            <button
+                className="arrow-btn arrow-up"
+                onClick={() => animateTo(current - 1)}
+                disabled={current === 0}
+                aria-label="Previous section"
+            >
+                <FontAwesomeIcon icon={faChevronUp} />
+            </button>
+            <button
+                className="arrow-btn arrow-down"
+                onClick={() => animateTo(current + 1)}
+                disabled={current === total - 1}
+                aria-label="Next section"
+            >
+                <FontAwesomeIcon icon={faChevronDown} />
+            </button>
         </div>
     );
-}
+};
 
 export default ScrollableSections;

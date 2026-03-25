@@ -53,23 +53,12 @@ code.p {
     width: 100%;
 }
 
-.section {
-    height: 110vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    text-shadow: 5px 5px 10px rgba(75, 75, 75, 0.2);
-}
-
 .section code.h1 {
     letter-spacing: 1px;
     font-weight: bold;
     text-align: center;
-    animation: typewriter 2s steps(13) 1 normal forwards,
-              blink 1s steps(13) infinite normal;
+    animation: typewriter 1.5s ease-out 1 forwards,
+               blink 1s ease infinite;
     white-space: nowrap;
     overflow: hidden;
     border-right: 5px solid black;

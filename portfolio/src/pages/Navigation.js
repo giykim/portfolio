@@ -4,7 +4,6 @@ import { Divide as Hamburger } from "hamburger-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import "./Navigation.css";
-import Ease from "../components/Ease";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -54,9 +53,7 @@ const Navigation = () => {
                 <li onClick={toggleIsOpen}><code className="p"><Link to="/about">About</Link></code></li>
             </ul>
 
-            <Ease>
-                <Outlet />
-            </Ease>
+            <Outlet />
 
             <footer className="footer">
                 <code className="p">© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</code>
