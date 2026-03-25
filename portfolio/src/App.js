@@ -3,15 +3,11 @@ import { AnimatePresence } from "framer-motion"
 import Navigation from "./pages/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
 import NoPage from "./pages/NoPage";
 import ScrollToTop from "./components/ScrollToTop"
 
 const routes = [
     { element: <Home />, index: true },
-    { path: "experience", element: <Experience /> },
-    { path: "projects", element: <Projects /> },
     { path: "about", element: <About /> },
     { path: "*", element: <NoPage /> },
 ];

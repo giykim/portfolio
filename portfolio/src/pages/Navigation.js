@@ -52,8 +52,6 @@ const Navigation = () => {
             <ul className={`navlinks ${isOpen ? "open" : ""}`} role="navigation" aria-label="Main navigation">
                 <li onClick={toggleIsOpen}><code className="p"><Link to="/">Home</Link></code></li>
                 <li onClick={toggleIsOpen}><code className="p"><Link to="/about">About</Link></code></li>
-                <li onClick={toggleIsOpen}><code className="p"><Link to="/experience">Experience</Link></code></li>
-                <li onClick={toggleIsOpen}><code className="p"><Link to="/projects">Projects</Link></code></li>
             </ul>
 
             <Ease>
