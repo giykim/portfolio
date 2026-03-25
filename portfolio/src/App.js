@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./pages/Navigation";
 import Home from "./pages/Home";
+import SteamScout from "./pages/SteamScout";
 import About from "./pages/About";
 import NoPage from "./pages/NoPage";
 import ScrollToTop from "./components/ScrollToTop"
 
 const routes = [
     { element: <Home />, index: true },
+    { path: "steam-scout", element: <SteamScout /> },
     { path: "about", element: <About /> },
     { path: "*", element: <NoPage /> },
 ];

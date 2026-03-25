@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ScrollableSections from '../components/ScrollableSections';
 import "./Home.css";
 
@@ -5,6 +6,9 @@ const Home = () => {
     const sections = [
         <>
             <div><code className="h1">Welcome to My Portfolio</code></div>
+        </>,
+        <>
+            <Link to="/steam-scout"><div><code className="h1">Steam Scout</code></div></Link>
         </>,
     ];
 
