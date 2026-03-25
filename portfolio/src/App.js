@@ -9,7 +9,7 @@ import NoPage from "./pages/NoPage";
 import ScrollToTop from "./components/ScrollToTop"
 
 const routes = [
-    { path: "/", element: <Home />, index: true },
+    { element: <Home />, index: true },
     { path: "experience", element: <Experience /> },
     { path: "projects", element: <Projects /> },
     { path: "about", element: <About /> },
