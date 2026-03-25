@@ -222,7 +222,7 @@ const About = () => {
     ];
 
     return (
-        <div className="content">
+        <div className="content" style={{ height: '100%' }}>
             <ScrollableSections sections={sections} />
         </div>
     )

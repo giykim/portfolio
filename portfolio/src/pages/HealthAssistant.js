@@ -20,7 +20,7 @@ const HealthAssistant = () => {
     ];
 
     return (
-        <div>
+        <div style={{ height: '100%' }}>
             <ScrollableSections sections={sections} />
         </div>
     );
