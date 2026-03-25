@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useLocation } from "react-router-dom"
+import { AnimatePresence, motion } from "framer-motion"
 import { Divide as Hamburger } from "hamburger-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -7,6 +8,7 @@ import "./Navigation.css";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     const toggleIsOpen = () => {
         setIsOpen(!isOpen);
@@ -53,7 +55,20 @@ const Navigation = () => {
                 <li onClick={toggleIsOpen}><code className="p"><Link to="/about">About</Link></code></li>
             </ul>
 
-            <Outlet />
+            <div style={{ position: 'relative', height: 'calc(100vh - 115px)' }}>
+                <AnimatePresence>
+                    <motion.div
+                        key={location.pathname}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.35, ease: "easeInOut" }}
+                        style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}
+                    >
+                        <Outlet />
+                    </motion.div>
+                </AnimatePresence>
+            </div>
 
             <footer className="footer">
                 <code className="p">© {new Date().getFullYear()} Giyoung Kim. All rights reserved.</code>

@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./pages/Navigation";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,13 +12,10 @@ const routes = [
 ];
 
 function Layout() {
-    const location = useLocation();
-
     return (
-        <AnimatePresence mode="wait">
+        <>
             <ScrollToTop />
-
-            <Routes location={location} key={location.pathname}>
+            <Routes>
                 <Route path="/" element={<Navigation />}>
                     {routes.map(({ path, element, index }, key) => (
                         <Route
@@ -31,7 +27,7 @@ function Layout() {
                     ))}
                 </Route>
             </Routes>
-        </AnimatePresence>
+        </>
     )
 }
 
