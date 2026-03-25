@@ -55,7 +55,7 @@ const Navigation = () => {
                 <li onClick={toggleIsOpen}><code className="p"><Link to="/about">About</Link></code></li>
             </ul>
 
-            <div style={{ position: 'relative', height: 'calc(100vh - 115px)' }}>
+            <div style={{ position: 'relative', marginTop: '75px', height: 'calc(100vh - 115px)' }}>
                 <AnimatePresence>
                     <motion.div
                         key={location.pathname}
