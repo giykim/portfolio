@@ -15,7 +15,6 @@ const ScrollableSections = ({ sections }) => {
     const [trans, setTrans] = useState(null);
 
     const scrollAccumRef = useRef(0);
-    const directionRef = useRef(0);
     const outProgressRef = useRef(0);
     const toRef = useRef(null);
     const isTransitioningRef = useRef(false);
@@ -43,7 +42,6 @@ const ScrollableSections = ({ sections }) => {
                 setCurrent(to);
                 setTrans(null);
                 scrollAccumRef.current = 0;
-                directionRef.current = 0;
                 outProgressRef.current = 0;
                 toRef.current = null;
                 isTransitioningRef.current = false;
@@ -83,30 +81,35 @@ const ScrollableSections = ({ sections }) => {
         if (isTransitioningRef.current) return;
 
         const delta = e.deltaY;
-        const newDir = delta > 0 ? 1 : -1;
 
-        if (directionRef.current !== 0 && directionRef.current !== newDir) {
-            scrollAccumRef.current = 0;
-            directionRef.current = 0;
-            outProgressRef.current = 0;
-            toRef.current = null;
-            setTrans(null);
-            return;
+        if (toRef.current === null) {
+            // No active transition — pick a target based on scroll direction
+            const dir = delta > 0 ? 1 : -1;
+            const to = currentRef.current + dir;
+            if (to < 0 || to >= total) return;
+            toRef.current = to;
+            scrollAccumRef.current = Math.abs(delta);
+        } else {
+            // Active partial transition — apply delta relative to locked target direction
+            const dir = toRef.current > currentRef.current ? 1 : -1;
+            scrollAccumRef.current += delta * dir;
+
+            if (scrollAccumRef.current <= 0) {
+                // Scrolled back past origin — clear transition
+                scrollAccumRef.current = 0;
+                outProgressRef.current = 0;
+                toRef.current = null;
+                setTrans(null);
+                return;
+            }
         }
 
-        directionRef.current = newDir;
-        scrollAccumRef.current += delta;
-
-        const to = currentRef.current + newDir;
-        if (to < 0 || to >= total) { scrollAccumRef.current = 0; return; }
-
-        toRef.current = to;
-        const outProgress = Math.min(Math.abs(scrollAccumRef.current) / SCROLL_THRESHOLD, 1);
+        const outProgress = Math.min(scrollAccumRef.current / SCROLL_THRESHOLD, 1);
         outProgressRef.current = outProgress;
-        setTrans({ to, outProgress, inProgress: 0 });
+        setTrans({ to: toRef.current, outProgress, inProgress: 0 });
 
         if (outProgress >= 1) {
-            startFadeIn(to);
+            startFadeIn(toRef.current);
         }
     }, [total, startFadeIn]);
 
