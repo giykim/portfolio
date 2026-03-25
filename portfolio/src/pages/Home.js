@@ -13,6 +13,9 @@ const Home = () => {
         <>
             <Link to="/steam-scout"><div><code className="h1">Steam Scout</code></div></Link>
         </>,
+        <>
+            <Link to="/about"><div><code className="h1">About</code></div></Link>
+        </>,
     ];
 
     return (
