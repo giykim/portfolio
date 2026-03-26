@@ -6,6 +6,7 @@ import "./ScrollableSections.css";
 const SCROLL_THRESHOLD = 800;
 const FADE_OUT_DURATION = 250;
 const FADE_IN_DURATION = 350;
+const TOUCH_MULTIPLIER = 3;
 
 const ScrollableSections = ({ sections }) => {
     const total = sections.length;
@@ -19,6 +20,7 @@ const ScrollableSections = ({ sections }) => {
     const toRef = useRef(null);
     const isTransitioningRef = useRef(false);
     const animFrameRef = useRef(null);
+    const lastTouchYRef = useRef(null);
 
     const cancelAnim = useCallback(() => {
         if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
@@ -77,26 +79,41 @@ const ScrollableSections = ({ sections }) => {
         animateOut(to, outProgressRef.current);
     }, [total, cancelAnim, animateOut]);
 
-    const handleScroll = useCallback((e) => {
-        e.preventDefault();
+    const animateBack = useCallback(() => {
+        const startProgress = outProgressRef.current;
+        const start = performance.now();
+        const duration = 200;
+        const tick = (now) => {
+            const t = Math.min((now - start) / duration, 1);
+            const outProgress = startProgress * (1 - t);
+            outProgressRef.current = outProgress;
+            if (outProgress > 0) {
+                setTrans({ to: toRef.current, outProgress, inProgress: 0 });
+                animFrameRef.current = requestAnimationFrame(tick);
+            } else {
+                scrollAccumRef.current = 0;
+                outProgressRef.current = 0;
+                toRef.current = null;
+                setTrans(null);
+            }
+        };
+        animFrameRef.current = requestAnimationFrame(tick);
+    }, []);
+
+    const applyDelta = useCallback((delta) => {
         if (isTransitioningRef.current) return;
 
-        const delta = e.deltaY;
-
         if (toRef.current === null) {
-            // No active transition — pick a target based on scroll direction
             const dir = delta > 0 ? 1 : -1;
             const to = currentRef.current + dir;
             if (to < 0 || to >= total) return;
             toRef.current = to;
             scrollAccumRef.current = Math.abs(delta);
         } else {
-            // Active partial transition — apply delta relative to locked target direction
             const dir = toRef.current > currentRef.current ? 1 : -1;
             scrollAccumRef.current += delta * dir;
 
             if (scrollAccumRef.current <= 0) {
-                // Scrolled back past origin — clear transition
                 scrollAccumRef.current = 0;
                 outProgressRef.current = 0;
                 toRef.current = null;
@@ -114,10 +131,48 @@ const ScrollableSections = ({ sections }) => {
         }
     }, [total, startFadeIn]);
 
+    const handleScroll = useCallback((e) => {
+        e.preventDefault();
+        applyDelta(e.deltaY);
+    }, [applyDelta]);
+
+    const handleTouchStart = useCallback((e) => {
+        lastTouchYRef.current = e.touches[0].clientY;
+    }, []);
+
+    const handleTouchMove = useCallback((e) => {
+        e.preventDefault();
+        const currentY = e.touches[0].clientY;
+        const delta = (lastTouchYRef.current - currentY) * TOUCH_MULTIPLIER;
+        lastTouchYRef.current = currentY;
+        applyDelta(delta);
+    }, [applyDelta]);
+
+    const handleTouchEnd = useCallback(() => {
+        lastTouchYRef.current = null;
+        if (isTransitioningRef.current || toRef.current === null) return;
+        if (outProgressRef.current >= 0.4) {
+            animateOut(toRef.current, outProgressRef.current);
+        } else {
+            animateBack();
+        }
+    }, [animateOut, animateBack]);
+
     useEffect(() => {
         window.addEventListener('wheel', handleScroll, { passive: false });
         return () => window.removeEventListener('wheel', handleScroll);
     }, [handleScroll]);
+
+    useEffect(() => {
+        window.addEventListener('touchstart', handleTouchStart, { passive: false });
+        window.addEventListener('touchmove', handleTouchMove, { passive: false });
+        window.addEventListener('touchend', handleTouchEnd);
+        return () => {
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, [handleTouchStart, handleTouchMove, handleTouchEnd]);
 
     useEffect(() => () => cancelAnim(), [cancelAnim]);
 
