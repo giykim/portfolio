@@ -98,6 +98,10 @@ code.p {
 
 .listheader .organization {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
 }
 
 .listheader .organization a {

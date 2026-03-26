@@ -21,6 +21,7 @@ const ScrollableSections = ({ sections }) => {
     const isTransitioningRef = useRef(false);
     const animFrameRef = useRef(null);
     const lastTouchYRef = useRef(null);
+    const sectionRef = useRef(null);
 
     const cancelAnim = useCallback(() => {
         if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
@@ -131,22 +132,32 @@ const ScrollableSections = ({ sections }) => {
         }
     }, [total, startFadeIn]);
 
+    const isSectionScrollBlocking = useCallback((deltaY) => {
+        const el = sectionRef.current;
+        if (!el || el.scrollHeight <= el.clientHeight) return false;
+        if (deltaY > 0) return el.scrollTop + el.clientHeight < el.scrollHeight - 1;
+        if (deltaY < 0) return el.scrollTop > 0;
+        return false;
+    }, []);
+
     const handleScroll = useCallback((e) => {
+        if (isSectionScrollBlocking(e.deltaY)) return;
         e.preventDefault();
         applyDelta(e.deltaY);
-    }, [applyDelta]);
+    }, [applyDelta, isSectionScrollBlocking]);
 
     const handleTouchStart = useCallback((e) => {
         lastTouchYRef.current = e.touches[0].clientY;
     }, []);
 
     const handleTouchMove = useCallback((e) => {
-        e.preventDefault();
         const currentY = e.touches[0].clientY;
         const delta = (lastTouchYRef.current - currentY) * TOUCH_MULTIPLIER;
         lastTouchYRef.current = currentY;
+        if (isSectionScrollBlocking(delta)) return;
+        e.preventDefault();
         applyDelta(delta);
-    }, [applyDelta]);
+    }, [applyDelta, isSectionScrollBlocking]);
 
     const handleTouchEnd = useCallback(() => {
         lastTouchYRef.current = null;
@@ -183,22 +194,22 @@ const ScrollableSections = ({ sections }) => {
     const renderSection = () => {
         if (!trans) {
             return (
-                <div key={`s-${current}`} className="section" style={{ opacity: 1 }}>
-                    {sections[current]}
+                <div key={`s-${current}`} className="section" ref={sectionRef} style={{ opacity: 1 }}>
+                    <div className="section-inner">{sections[current]}</div>
                 </div>
             );
         }
         if (trans.outProgress < 1) {
             return (
-                <div key={`s-${current}`} className="section" style={{ opacity: 1 - trans.outProgress }}>
-                    {sections[current]}
+                <div key={`s-${current}`} className="section" ref={sectionRef} style={{ opacity: 1 - trans.outProgress }}>
+                    <div className="section-inner">{sections[current]}</div>
                 </div>
             );
         }
         // fade-in: next section mounts here for the first time this visit
         return (
-            <div key={`s-${trans.to}`} className="section" style={{ opacity: trans.inProgress }}>
-                {sections[trans.to]}
+            <div key={`s-${trans.to}`} className="section" ref={sectionRef} style={{ opacity: trans.inProgress }}>
+                <div className="section-inner">{sections[trans.to]}</div>
             </div>
         );
     };

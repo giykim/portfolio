@@ -41,7 +41,7 @@ const About = () => {
         <>
             <div><code className="h1">Education</code></div>
             <AccordionGroup>
-                <AccordionItem title="Duke University — August 2021 - May 2025">
+                <AccordionItem title="Bachelor of Science - Duke University">
                     <div className="listheader">
                         <div className="organization">
                             <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
@@ -50,6 +50,7 @@ const About = () => {
                                 </div>
                                 <code className="p name">Duke University &#8599;</code>
                             </a>
+                            <code className="p date">August 2021 – May 2025</code>
                         </div>
                     </div>
                     <ul>
@@ -91,8 +92,8 @@ const About = () => {
                     <ul>
                         <li><code className="p">Java</code></li>
                         <li><code className="p">Python</code></li>
-                        <li><code className="p">JavaScript</code></li>
                         <li><code className="p">C#</code></li>
+                        <li><code className="p">JavaScript</code></li>
                         <li><code className="p">C++</code></li>
                     </ul>
                 </AccordionItem>
@@ -116,7 +117,23 @@ const About = () => {
         <>
             <div><code className="h1">Experience</code></div>
             <AccordionGroup>
-                <AccordionItem title="Software Engineer — Amazon (June 2025 - January 2026)">
+                <AccordionItem title="Software Development Engineer - AWS">
+                    <div className="listheader">
+                        <div className="organization">
+                            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+                                <div className="logocontainer">
+                                    <img src="images/amazon-logo.png" alt="AWS Logo" className="logo" />
+                                </div>
+                                <code className="p name">AWS &#8599;</code>
+                            </a>
+                            <code className="p date">March 2026 – Present</code>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><code className="p">Filler text</code></li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem title="Software Development Engineer - Amazon">
                     <div className="listheader">
                         <div className="organization">
                             <a href="https://amazon.com/" target="_blank" rel="noopener noreferrer">
@@ -125,13 +142,14 @@ const About = () => {
                                 </div>
                                 <code className="p name">Amazon &#8599;</code>
                             </a>
+                            <code className="p date">June 2025 – January 2026</code>
                         </div>
                     </div>
                     <ul>
                         <li><code className="p">Filler text</code></li>
                     </ul>
                 </AccordionItem>
-                <AccordionItem title="ML Research Assistant — Duke University (May 2023 - June 2025)">
+                <AccordionItem title="ML Research Assistant - Duke University">
                     <div className="listheader">
                         <div className="organization">
                             <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
@@ -140,13 +158,14 @@ const About = () => {
                                 </div>
                                 <code className="p name">Duke University &#8599;</code>
                             </a>
+                            <code className="p date">May 2023 – June 2025</code>
                         </div>
                     </div>
                     <ul>
                         <li><code className="p">Filler text</code></li>
                     </ul>
                 </AccordionItem>
-                <AccordionItem title="SWE Intern — Hagerty (May 2024 - August 2024)">
+                <AccordionItem title="SWE Intern - Hagerty">
                     <div className="listheader">
                         <div className="organization">
                             <a href="https://www.hagerty.com/" target="_blank" rel="noopener noreferrer">
@@ -155,13 +174,14 @@ const About = () => {
                                 </div>
                                 <code className="p name">Hagerty &#8599;</code>
                             </a>
+                            <code className="p date">May 2024 – August 2024</code>
                         </div>
                     </div>
                     <ul>
                         <li><code className="p">Filler text</code></li>
                     </ul>
                 </AccordionItem>
-                <AccordionItem title="SWE Intern — Broadsword Online Games (May 2022 - July 2022)">
+                <AccordionItem title="SWE Intern - Broadsword Online Games">
                     <div className="listheader">
                         <div className="organization">
                             <a href="https://broadsword.com/" target="_blank" rel="noopener noreferrer">
@@ -170,6 +190,7 @@ const About = () => {
                                 </div>
                                 <code className="p name">Broadsword Online Games &#8599;</code>
                             </a>
+                            <code className="p date">May 2022 – July 2022</code>
                         </div>
                     </div>
                     <ul>
@@ -181,8 +202,9 @@ const About = () => {
         <>
             <div><code className="h1">Projects</code></div>
             <AccordionGroup>
-                <AccordionItem title="Mini Amazon (September 2024 - November 2024)">
+                <AccordionItem title="Mini Amazon">
                     <div className="listheader">
+                        <code className="p date">September 2024 – November 2024</code>
                         <code className="p"><a href="https://github.com/giykim/mini-amazon" target="_blank" rel="noopener noreferrer">View repository &#8599;</a></code>
                     </div>
                     <ul>
@@ -194,8 +216,9 @@ const About = () => {
                         <img src="images/amazon.png" alt="Mini Amazon e-commerce project screenshot" />
                     </div>
                 </AccordionItem>
-                <AccordionItem title="PLTR Trade Strategy (March 2024 - April 2024)">
+                <AccordionItem title="PLTR Trade Strategy">
                     <div className="listheader">
+                        <code className="p date">March 2024 – April 2024</code>
                         <code className="p"><a href="https://github.com/giykim/algo-project" target="_blank" rel="noopener noreferrer">View repository &#8599;</a></code>
                     </div>
                     <ul>
