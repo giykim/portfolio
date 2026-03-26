@@ -2,7 +2,7 @@
 
 .navbar {
     top: 0;
-    position: sticky;
+    position: relative;
     display: flex;
     align-items: center;
     background-color: #060a10;
@@ -13,6 +13,7 @@
     margin: 0;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 207, 255, 0.15);
+    flex-shrink: 0;
 }
 
 .leftnavbar, .rightnavbar {
@@ -93,6 +94,8 @@
     padding: 8px;
     border-top: 1px solid rgba(0, 207, 255, 0.15);
     flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer code {

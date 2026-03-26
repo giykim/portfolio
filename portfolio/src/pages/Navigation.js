@@ -19,7 +19,7 @@ const Navigation = () => {
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}>
             <nav className="navbar">
                 <div className="leftnavbar">
                     <button
@@ -57,7 +57,7 @@ const Navigation = () => {
                 <li onClick={toggleIsOpen}><code className="p"><Link to="/about">About</Link></code></li>
             </ul>
 
-            <div style={{ position: 'relative', flex: 1, overflow: 'hidden' }}>
+            <div style={{ position: 'relative', flex: 1, overflow: 'hidden', minHeight: 0 }}>
                 <AnimatePresence>
                     <motion.div
                         key={location.pathname}

@@ -19,6 +19,12 @@
     overflow-y: auto;
     box-sizing: border-box;
     padding: 40px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.section::-webkit-scrollbar {
+    display: none;
 }
 
 .arrow-btn {
