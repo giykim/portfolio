@@ -80,6 +80,7 @@ code.p {
     max-width: 700px;
 }
 
+
 .listheader {
     align-self: center;
     display: flex;
@@ -118,8 +119,8 @@ ul {
     list-style-position: outside;
     padding-left: 0;
     text-align: left;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .logocontainer {
