@@ -1,24 +1,42 @@
 import ScrollableSections from "../components/ScrollableSections";
 import AccordionItem, { AccordionGroup } from "../components/AccordionItem";
 import "./About.css";
-import Ease from "../components/Ease";
 
 const About = () => {
     const sections = [
         <>
-            <div className="imgcontainer">
-                <img src="images/profile.png" alt="Profile" />
-            </div>
-            <Ease>
-                <code className="p">
-                    I'm a Software Development Engineer at <strong>AWS</strong> with dual B.S. degrees in Computer Science and Statistical Science from <strong>Duke University</strong>, passionate about using ML and AI to build better customer experiences.
-                </code>
-                <ul>
-                    <li><code className="p">Hobbies: building ML / AI projects, Counter-Strike, weightlifting, bouldering</code></li>
-                    <li><code className="p">Shows: The Simpsons, Bojack Horseman, Breaking Bad</code></li>
-                    <li><code className="p">Interests: Watches, FC Barcelona</code></li>
-                </ul>
-            </Ease>
+            <div><code className="h1">About</code></div>
+            <AccordionGroup>
+                <AccordionItem title="Bio">
+                    <div className="imgcontainer">
+                        <img src="images/profile.png" alt="Profile" />
+                    </div>
+                    <code className="p">
+                        I'm a Software Development Engineer at <strong>AWS</strong> with dual B.S. degrees in Computer Science and Statistical Science from <strong>Duke University</strong>, passionate about applying ML and AI to improve people's lives.
+                    </code>
+                </AccordionItem>
+                <AccordionItem title="Hobbies">
+                    <ul>
+                        <li><code className="p">Building ML / AI projects</code></li>
+                        <li><code className="p">Counter-Strike</code></li>
+                        <li><code className="p">Weightlifting</code></li>
+                        <li><code className="p">Bouldering</code></li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem title="Shows">
+                    <ul>
+                        <li><code className="p">The Simpsons</code></li>
+                        <li><code className="p">Bojack Horseman</code></li>
+                        <li><code className="p">Breaking Bad</code></li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem title="Interests">
+                    <ul>
+                        <li><code className="p">Watches</code></li>
+                        <li><code className="p">FC Barcelona</code></li>
+                    </ul>
+                </AccordionItem>
+            </AccordionGroup>
         </>,
         <>
             <div><code className="h1">Education</code></div>
@@ -69,11 +87,28 @@ const About = () => {
         <>
             <div><code className="h1">Technical Skills</code></div>
             <AccordionGroup>
-                <AccordionItem title="Languages & Tools">
+                <AccordionItem title="Languages">
                     <ul>
-                        <li><code className="p"><strong>Languages: </strong>Java, Python, JavaScript, C#, C++</code></li>
-                        <li><code className="p"><strong>Databases: </strong>MongoDB, DynamoDB, PostgreSQL</code></li>
-                        <li><code className="p"><strong>Cloud &amp; DevOps: </strong>AWS (Lambda, ECS, Step Functions, CloudFormation, CloudWatch), Docker, Git, Azure</code></li>
+                        <li><code className="p">Java</code></li>
+                        <li><code className="p">Python</code></li>
+                        <li><code className="p">JavaScript</code></li>
+                        <li><code className="p">C#</code></li>
+                        <li><code className="p">C++</code></li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem title="Databases">
+                    <ul>
+                        <li><code className="p">MongoDB</code></li>
+                        <li><code className="p">DynamoDB</code></li>
+                        <li><code className="p">PostgreSQL</code></li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem title="Cloud &amp; DevOps">
+                    <ul>
+                        <li><code className="p">AWS (Lambda, ECS, Step Functions, CloudFormation, CloudWatch)</code></li>
+                        <li><code className="p">Docker</code></li>
+                        <li><code className="p">Git</code></li>
+                        <li><code className="p">Azure</code></li>
                     </ul>
                 </AccordionItem>
             </AccordionGroup>
@@ -190,11 +225,19 @@ const About = () => {
         <>
             <div><code className="h1">Contact</code></div>
             <AccordionGroup>
-                <AccordionItem title="Get in touch">
+                <AccordionItem title="Email">
                     <ul>
-                        <li><code className="p"><strong>Email: </strong><a href="mailto:giy.kim27@gmail.com">giy.kim27@gmail.com &#8599;</a></code></li>
-                        <li><code className="p"><strong>LinkedIn: </strong><a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">linkedin.com/in/giyoung-kim &#8599;</a></code></li>
-                        <li><code className="p"><strong>GitHub: </strong><a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">github.com/giykim &#8599;</a></code></li>
+                        <li><code className="p"><a href="mailto:giy.kim27@gmail.com">giy.kim27@gmail.com &#8599;</a></code></li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem title="LinkedIn">
+                    <ul>
+                        <li><code className="p"><a href="https://linkedin.com/in/giyoung-kim" target="_blank" rel="noopener noreferrer">linkedin.com/in/giyoung-kim &#8599;</a></code></li>
+                    </ul>
+                </AccordionItem>
+                <AccordionItem title="GitHub">
+                    <ul>
+                        <li><code className="p"><a href="https://github.com/giykim" target="_blank" rel="noopener noreferrer">github.com/giykim &#8599;</a></code></li>
                     </ul>
                 </AccordionItem>
             </AccordionGroup>
