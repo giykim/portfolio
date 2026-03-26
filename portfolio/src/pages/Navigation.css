@@ -102,3 +102,23 @@
     color: #6b7f8f;
     font-size: 12px;
 }
+
+@media (max-width: 480px) {
+    .leftnavbar, .rightnavbar {
+        padding: 6px 8px;
+        gap: 6px;
+    }
+
+    .leftnavbar code.h2 {
+        font-size: 14px;
+    }
+
+    .rightnavbar code.p {
+        font-size: 11px;
+    }
+
+    .rightnavbar svg {
+        font-size: 18px;
+    }
+}
+

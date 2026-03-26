@@ -23,7 +23,7 @@ const About = () => {
             <div><code className="h1">Education</code></div>
         </>,
         <>
-            <div>
+            <div className="content-block">
                 <div className="listheader">
                     <div className="organization">
                         <a href="https://duke.edu/" target="_blank" rel="noopener noreferrer">
@@ -80,7 +80,7 @@ const About = () => {
             <div><code className="h1">Experience</code></div>
         </>,
         <>
-            <div>
+            <div className="content-block">
                 <div><code className="h1">Software Engineer</code></div>
                 <div className="listheader">
                     <div className="organization">
@@ -99,7 +99,7 @@ const About = () => {
             </div>
         </>,
         <>
-            <div>
+            <div className="content-block">
                 <div><code className="h1">ML Research Assistant</code></div>
                 <div className="listheader">
                     <div className="organization">
@@ -118,7 +118,7 @@ const About = () => {
             </div>
         </>,
         <>
-            <div>
+            <div className="content-block">
                 <div><code className="h1">SWE Intern</code></div>
                 <div className="listheader">
                     <div className="organization">
@@ -137,7 +137,7 @@ const About = () => {
             </div>
         </>,
         <>
-            <div>
+            <div className="content-block">
                 <div><code className="h1">SWE Intern</code></div>
                 <div className="listheader">
                     <div className="organization">
@@ -159,7 +159,7 @@ const About = () => {
             <div><code className="h1">Projects</code></div>
         </>,
         <>
-            <div>
+            <div className="content-block">
                 <div><code className="h1">Mini Amazon</code></div>
                 <div className="listheader">
                     <code className="p"><a href="https://github.com/giykim/mini-amazon" target="_blank" rel="noopener noreferrer">View repository &#8599;</a></code>
@@ -176,7 +176,7 @@ const About = () => {
             </div>
         </>,
         <>
-            <div>
+            <div className="content-block">
                 <div><code className="h1">PLTR Trade Strategy</code></div>
                 <div className="listheader">
                     <code className="p"><a href="https://github.com/giykim/algo-project" target="_blank" rel="noopener noreferrer">View repository &#8599;</a></code>
